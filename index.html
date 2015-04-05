@@ -8,6 +8,7 @@
 		<meta name="description" content="My Parse App" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/main.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.0.min.js"></script>
 		<script src="js/libs/bootstrap/bootstrap.min.js"></script>
@@ -18,32 +19,20 @@
 			script
 		</script>
 	</head>
-	<body>
-		<div id="main">
-			<h1>You&apos;re ready to use Parse!</h1>
-			<p>Read the documentation and start building your JavaScript app:</p>
-			<ul>
-				<li>
-					<a href="https://www.parse.com/docs/js_guide">Parse JavaScript Guide</a>
-				</li>
-				<li>
-					<a href="https://www.parse.com/docs/js">Parse JavaScript API Documentation</a>
-				</li>
-			</ul>
-			<div style="display:none" class="error">
-				Looks like there was a problem saving the test object. Make sure you&apos;ve set your application ID and javascript key correctly in the call to
-				<code>Parse.initialize</code>
-				in this file.
-			</div>
-			<div style="" class="success">
-				<p>We&apos;ve also just created your first object using the following code:</p>
-				<code>
-					var TestObject = Parse.Object.extend(&quot;TestObject&quot;);<br />
-					var testObject = new TestObject();<br />
-					testObject.save({foo: &quot;bar&quot;});
-				</code>
-			</div>
+	<body class="siteContainer">
+		<div class="container-fluid homepageInvsNav">
+			<div class="navbar-header websiteBrand">Astro</div>
 		</div>
+		<section class="registrationSection">
+			<div class="container loginContainer">
+				<div class="loginBox center-block">
+					<div class="center-block avatarContainer">
+						<img class="avatarImage pagination-centered" src="imgs/loginScreen/avatar.png" />
+					</div>
+					<label class="center-block">Login</label>
+					<input placeholder="Username" class="center-block" type="text" /><input placeholder="Password" class="center-block" type="text" /></div>
+			</div>
+		</section>
 		<script type="text/javascript">
 			Parse.initialize("l3iYSEoRauE5ctDyD6CwojGCGIyJHxeCmgEMhnjZ", "prAydsNAqfn6j4BYudc9iJhvavc0C5IcMUyOC6Yj");
 			
