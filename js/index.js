@@ -23,22 +23,22 @@ var clearOutInputs = function(){
 	
 var resettingUsernameAndRegistrationButtonText = function(){
 		//Change the button Names
-		$("#registrationButtonPress").text('Register');
+		$("#registrationButtonPress").text('New User');
 		$("#loginButtonPress").text('Login');
 	
 	};
 	
 var hideFormFields = function(){
 		//Hiding password, and email fields
-		$('#passwordConfirmation').hide('fast').remove();
-		$('#emailConfirmationOne').hide('fast').remove();
-		$('#emailConfirmationTwo').hide('fast').remove();
+		$('#passwordConfirmation').hide('slow').remove();
+		$('#emailConfirmationOne').hide('slow').remove();
+		$('#emailConfirmationTwo').hide('slow').remove();
 	
 	};
 
 var aniamteFormFieldsFrom = function(){
 	
-		$(".loginBox").animate({height: '330px'});
+		$(".loginBox").animate({height: '490px'});
 		//$(".inputContainer").animate({height: '100px'});
 		$(".registrationButton").animate({ 
        	 top: "-=140px",
@@ -48,12 +48,12 @@ var aniamteFormFieldsFrom = function(){
 var toggleButtonNames = function(){
 		//Change the button Names
 		$("#registrationButtonPress").text('Login');
-		$("#loginButtonPress").text('Register');
+		$("#loginButtonPress").text('New User');
 	};
 
 var aniamteFormFieldsTo = function(){
 		//Animating the form fields To their destination
-		$(".loginBox").animate({height: '460px'});
+		$(".loginBox").animate({height: '620px'});
 			//$(".inputContainer").animate({height: '190px'});
 			$(".registrationButton").animate({ 
 	       	 top: "+=140px",

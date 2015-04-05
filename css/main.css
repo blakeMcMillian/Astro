@@ -2,10 +2,12 @@
     background-color:#ecf0f1;
     margin-bottom:20px;
     margin-top:10px;
+    height:40px;
+    width:300px;
 }
 
 .inputContainer {
-    height:100px;
+    height:210px;
 }
 
 .registrationButton {
@@ -25,7 +27,7 @@ button .btn .btn-success {
 }
 
 .loginBox {
-    height:330px;
+    height:470px;
     background-color:#34495e;
     width:360px;
     box-shadow:1px 1px 1px rgba(0,0,0,0.8);
@@ -44,6 +46,7 @@ button .btn .btn-success {
     color:#ecf0f1;
     text-align:center;
     font-size:x-large;
+    margin-top:10%;
 }
 
 container {
@@ -67,7 +70,7 @@ body {
 .loginContainer {
     background-color:;
     height:450px;
-    margin-top:150px;
+    margin-top:70px;
 }
 
 .registrationSection {
