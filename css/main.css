@@ -4,10 +4,30 @@
     margin-top:10px;
 }
 
+.inputContainer {
+    height:160px;
+}
+
+.registrationButton {
+    border-radius:25px;
+    background-color:#ecf0f1;
+    margin-top:65px;
+    margin-left:5%;
+    width:100px;
+}
+
+.loginButton {
+    float:right;
+    margin-right:5%;
+}
+
+button .btn .btn-success {
+}
+
 .loginBox {
     height:450px;
     background-color:#34495e;
-    width:50%;
+    width:360px;
     box-shadow:1px 1px 1px rgba(0,0,0,0.8);
 }
 

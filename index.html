@@ -11,6 +11,9 @@
 		<link rel="stylesheet" href="css/main.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.0.min.js"></script>
+		<script type="text/javascript" src="js/index.js">
+			script type = 'text/javascript'
+			src = 'main.js'</script>
 		<script src="js/libs/bootstrap/bootstrap.min.js"></script>
 		<script src="js/libs/jquery-1.11.2.min.js">
 			script
@@ -30,7 +33,11 @@
 						<img class="avatarImage pagination-centered" src="imgs/loginScreen/avatar.png" />
 					</div>
 					<label class="center-block">Login</label>
-					<input placeholder="Username" class="center-block" type="text" /><input placeholder="Password" class="center-block" type="text" /></div>
+					<div class="inputContainer">
+						<input id="usernameInputField" placeholder="Username" class="center-block" type="text" /><input id="passwordInputField" placeholder="Password" class="center-block" type="password" /></div>
+					<button class="btn btn-default registrationButton">Register</button>
+					<button class="btn btn-default registrationButton .loginButton loginButton" id="loginButtonPress">Login</button>
+				</div>
 			</div>
 		</section>
 		<script type="text/javascript">
