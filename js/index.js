@@ -1,10 +1,14 @@
 /**
  * @author
+
+Developer:
+Blake McMillian
+
  */
 
 //Variables
-	var toggleHeight = true;
-	var userIsRegistering = false;
+var toggleHeight = true;
+var userIsRegistering = false;
 	
 //Setting up Parse APPID + Javascript Key
 Parse.initialize("l3iYSEoRauE5ctDyD6CwojGCGIyJHxeCmgEMhnjZ", "prAydsNAqfn6j4BYudc9iJhvavc0C5IcMUyOC6Yj");
@@ -17,7 +21,7 @@ var clearOutInputs = function(){
 	
 	};
 	
-var toggleUsernameAndRegistrationButtonText = function(){
+var resettingUsernameAndRegistrationButtonText = function(){
 		//Change the button Names
 		$("#registrationButtonPress").text('Register');
 		$("#loginButtonPress").text('Login');
@@ -55,11 +59,16 @@ var aniamteFormFieldsTo = function(){
 	       	 top: "+=140px",
 	      	}, '400');
 	};
-var parseUserLoginFunction = function(inputUsername, inputPassword){
-	
-	};
-	
 
+var togglingUsernameAndRegisterationButtonText = function(){
+		
+			//Change the button Names
+			$("#registrationButtonPress").text('Cancel');
+			$("#loginButtonPress").text('Register');
+			
+}	
+
+//Document ready function
 $( document ).ready(function() {
 	
 	
@@ -70,17 +79,19 @@ $( document ).ready(function() {
 		//Check the form fields in the dom to determine if the user is registering
 		if(userIsRegistering)
 		{
-			//Change the button Names
-			$("#registrationButtonPress").text('Cancel');
-			$("#loginButtonPress").text('Register');
-		}
-   	
+		   var usernameRegistration = $('#usernameInputField').val();
+		   var passwordRegistration = $('#passwordInputField').val();
+			
+		
+		}//end - if conditional
+		
+
 		//obtaining the username and password from the user
-		var username = $('#usernameInputField').val();
-		var password = $('#passwordInputField').val();
+		var usernameLogin = $('#usernameInputField').val();
+		var passwordLogin = $('#passwordInputField').val();
 	
 		//Parse login verification
-		Parse.User.logIn(username, password, {
+		Parse.User.logIn(usernameLogin, passwordLogin, {
 		 	 success: function(user) 
 			{
 		    // Do stuff after successful login.
@@ -90,7 +101,7 @@ $( document ).ready(function() {
 		    // The login failed. Check error to see why.
 			alert('NOT');
 	  
-		}//end - error prom
+		}//end - error
 	
     });//end parse login function
 	
@@ -101,6 +112,9 @@ $( document ).ready(function() {
 
 		if(toggleHeight)
 		{
+			//Change the button Names
+			togglingUsernameAndRegisterationButtonText();
+			
 			//Animating the loginbox and form fields
 			aniamteFormFieldsTo();
 	
@@ -136,7 +150,7 @@ $( document ).ready(function() {
 		toggleHeight = true;
 		
 		//Toggling login and registration button text
-		toggleUsernameAndRegistrationButtonText();
+		resettingUsernameAndRegistrationButtonText();
 		
 
 		}//end - else statement
