@@ -35,27 +35,10 @@
 					<label class="center-block">Login</label>
 					<div class="inputContainer">
 						<input id="usernameInputField" placeholder="Username" class="center-block" type="text" /><input id="passwordInputField" placeholder="Password" class="center-block" type="password" /></div>
-					<button class="btn btn-default registrationButton">Register</button>
+					<button class="btn btn-default registrationButton" id="registrationButtonPress">Register</button>
 					<button class="btn btn-default registrationButton .loginButton loginButton" id="loginButtonPress">Login</button>
 				</div>
 			</div>
 		</section>
-		<script type="text/javascript">
-			Parse.initialize("l3iYSEoRauE5ctDyD6CwojGCGIyJHxeCmgEMhnjZ", "prAydsNAqfn6j4BYudc9iJhvavc0C5IcMUyOC6Yj");
-			
-			
-			var TestObject = Parse.Object.extend("TestObject");
-			var testObject = new TestObject();
-			testObject.save({
-				foo: "bar"
-			}, {
-				success: function(object) {
-					$(".success").show();
-				},
-				error: function(model, error) {
-					$(".error").show();
-				}
-			});
-		</script>
 	</body>
 </html>
