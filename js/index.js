@@ -2,7 +2,11 @@
  * @author
  */
 
-//functions
+//Variables
+	var toggleHeight = true;
+	var userIsRegistering = false;
+
+//Functions
 var clearOutInputs = function(){
 		//removing content from the inital input fields
 		$('#usernameInputField').val('');
@@ -11,19 +15,37 @@ var clearOutInputs = function(){
 	};
 	
 var toggleUsernameAndRegistrationButtonText = function(){
-		//removing content from the inital input fields
-		$('#usernameInputField').val('');
-		$('#passwordInputField').val('');
+		//Change the button Names
+		$("#registrationButtonPress").text('Register');
+		$("#loginButtonPress").text('Login');
 	
 	};
 	
+var hideFormFields = function(){
+		//Hiding password, and email fields
+		$('#passwordConfirmation').hide('fast').remove();
+		$('#emailConfirmationOne').hide('fast').remove();
+		$('#emailConfirmationTwo').hide('fast').remove();
+	
+	};
 
+var aniamteFormFieldsFrom = function(){
+	
+		$(".loginBox").animate({height: '330px'});
+		//$(".inputContainer").animate({height: '100px'});
+		$(".registrationButton").animate({ 
+       	 top: "-=140px",
+      	}, '400');
+	};
+	
+var toggleButtonNames = function(){
+		//Change the button Names
+		$("#registrationButtonPress").text('Login');
+		$("#loginButtonPress").text('Register');
+	};
+	
 
 $( document ).ready(function() {
-	
-	//Variables
-	var toggleHeight = true;
-	var userIsRegistering = false;
 	
 	//Setting up Parse APPID + Javascript Key
 	Parse.initialize("l3iYSEoRauE5ctDyD6CwojGCGIyJHxeCmgEMhnjZ", "prAydsNAqfn6j4BYudc9iJhvavc0C5IcMUyOC6Yj");
@@ -33,7 +55,9 @@ $( document ).ready(function() {
 		
 	if(userIsRegistering)
 	{
-		
+		//Change the button Names
+		$("#registrationButtonPress").text('Cancel');
+		$("#loginButtonPress").text('Register');
 	}
    	
 	var username = $('#usernameInputField').val();
@@ -59,46 +83,38 @@ $( document ).ready(function() {
 
 		if(toggleHeight)
 		{
-		$(".loginBox").animate({height: '460px'});
-		//$(".inputContainer").animate({height: '190px'});
-		$(".registrationButton").animate({ 
-       	 top: "+=140px",
-      	}, '400');
-
-		//Rendering registration field
-		$('.inputContainer').append('<input type="password" value="" class=".loginBox input center-block" placeholder="Confirm Password" id="passwordConfirmation" />');
-		
-		$('#passwordConfirmation').hide().show('slow');
-		
-		$('.inputContainer').append('<input type="email" value="" class=".loginBox input center-block" placeholder="Enter Email Address" id="emailConfirmationOne" />');
-		
-		$('#emailConfirmationOne').hide().show('slow');
-		
-		$('.inputContainer').append('<input type="email" value="" class=".loginBox input center-block" placeholder="Confirm Email Address" id="emailConfirmationTwo" />');
-		
-		$('#emailConfirmationTwo').hide().show('slow');
-		
-		//Change the button Names
-		$("#registrationButtonPress").text('Cancel');
-		$("#loginButtonPress").text('Register');
-		
-		//Toggling Boolean values
-		toggleHeight = false;
-		userIsRegistering = true;
+			$(".loginBox").animate({height: '460px'});
+			//$(".inputContainer").animate({height: '190px'});
+			$(".registrationButton").animate({ 
+	       	 top: "+=140px",
+	      	}, '400');
+	
+			//Rendering registration field
+			$('.inputContainer').append('<input type="password" value="" class=".loginBox input 					center-block" placeholder="Confirm Password" id="passwordConfirmation" />');
+			
+			$('#passwordConfirmation').hide().show('slow');
+			
+			$('.inputContainer').append('<input type="password" value="" class=".loginBox input 					center-block" placeholder="Enter Email" id="emailConfirmationOne" />');
+			
+			$('#emailConfirmationOne').hide().show('slow');
+			
+			$('.inputContainer').append('<input type="password" value="" class=".loginBox input 					center-block" placeholder="Confirm Email" id="emailConfirmationTwo" />');
+			
+			$('#emailConfirmationTwo').hide().show('slow');
+			
+			//Toggling Boolean values
+			toggleHeight = false;
+			userIsRegistering = true;
 		
 		
 		}//end - if statement
 		
 		else {
-		$(".loginBox").animate({height: '330px'});
-		//$(".inputContainer").animate({height: '100px'});
-		$(".registrationButton").animate({ 
-       	 top: "-=140px",
-      	}, '400');
+		//animating form fields FROM
+		aniamteFormFieldsFrom();
 		
-		$('#passwordConfirmation').hide('fast').remove();
-		$('#emailConfirmationOne').hide('fast').remove();
-		$('#emailConfirmationTwo').hide('fast').remove();
+		//hiding the form fields
+		hideFormFields();
 		
 		//Clear out inputs
 		clearOutInputs();
