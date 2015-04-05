@@ -61,7 +61,6 @@ var aniamteFormFieldsTo = function(){
 	};
 
 var togglingUsernameAndRegisterationButtonText = function(){
-		
 			//Change the button Names
 			$("#registrationButtonPress").text('Cancel');
 			$("#loginButtonPress").text('Register');
@@ -70,19 +69,25 @@ var togglingUsernameAndRegisterationButtonText = function(){
 
 //Document ready function
 $( document ).ready(function() {
-	
-	
-    
+	 
 	//listening for LOGIN button to be pressed
 	$("#loginButtonPress").click(function(){
 		
 		//Check the form fields in the dom to determine if the user is registering
 		if(userIsRegistering)
 		{
-		   var usernameRegistration = $('#usernameInputField').val();
-		   var passwordRegistration = $('#passwordInputField').val();
+		   	var usernameRegistration = $('#usernameInputField').val();
+		   	var passwordRegistration = $('#passwordInputField').val();
+			var passwordConfirmation = $('#passwordConfirmation').val();
+			var emailRegistration = $('#emailConfirmationOne').val();
+			var emailConfirmationRegistration = $('#emailConfirmationTwo').val();
 			
-		
+			//Make sure that the username does not exist
+			
+			//Confirm that both passwords are the same
+			
+			//Confirm that both email addresses are the same
+
 		}//end - if conditional
 		
 
@@ -148,6 +153,7 @@ $( document ).ready(function() {
 		clearOutInputs();
 		
 		toggleHeight = true;
+		userIsRegistering = false;
 		
 		//Toggling login and registration button text
 		resettingUsernameAndRegistrationButtonText();
