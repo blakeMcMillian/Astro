@@ -30,9 +30,9 @@ var resettingUsernameAndRegistrationButtonText = function(){
 	
 var hideFormFields = function(){
 		//Hiding password, and email fields
-		$('#passwordConfirmation').hide('slow').remove();
-		$('#emailConfirmationOne').hide('slow').remove();
-		$('#emailConfirmationTwo').hide('slow').remove();
+		$('#passwordConfirmation').hide('fast');
+		$('#emailConfirmationOne').hide('fast');
+		$('#emailConfirmationTwo').hide('fast');
 	
 	};
 
@@ -66,6 +66,12 @@ var togglingUsernameAndRegisterationButtonText = function(){
 			$("#loginButtonPress").text('Register');
 			
 }	
+var removeFormFields = function(){
+			$('#passwordConfirmation').remove();
+			$('#emailConfirmationOne').remove();
+			$('#emailConfirmationTwo').remove();
+	
+	};
 
 //Document ready function
 $( document ).ready(function() {
@@ -117,6 +123,8 @@ $( document ).ready(function() {
 
 		if(toggleHeight)
 		{
+			//Hiding password, and email fields
+			removeFormFields();
 			//Change the button Names
 			togglingUsernameAndRegisterationButtonText();
 			
