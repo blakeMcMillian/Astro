@@ -5,74 +5,6 @@ Developer:
 Blake McMillian
 
  */
-
-//Variables
-var toggleHeight = true;
-var userIsRegistering = false;
-	
-//Setting up Parse APPID + Javascript Key
-Parse.initialize("l3iYSEoRauE5ctDyD6CwojGCGIyJHxeCmgEMhnjZ", "prAydsNAqfn6j4BYudc9iJhvavc0C5IcMUyOC6Yj");
-
-//Functions
-var clearOutInputs = function(){
-		//removing content from the inital input fields
-		$('#usernameInputField').val('');
-		$('#passwordInputField').val('');
-	
-	};
-	
-var resettingUsernameAndRegistrationButtonText = function(){
-		//Change the button Names
-		$("#registrationButtonPress").text('New User');
-		$("#loginButtonPress").text('Login');
-	
-	};
-	
-var hideFormFields = function(){
-		//Hiding password, and email fields
-		$('#passwordConfirmation').hide('fast');
-		$('#emailConfirmationOne').hide('fast');
-		$('#emailConfirmationTwo').hide('fast');
-	
-	};
-
-var aniamteFormFieldsFrom = function(){
-	
-		$(".loginBox").animate({height: '410px'});
-		//$(".inputContainer").animate({height: '100px'});
-	//	$(".registrationButton").animate({ 
-      // 	 top: "-=50px",
-      //	}, '400');
-	};
-	
-var toggleButtonNames = function(){
-		//Change the button Names
-		$("#registrationButtonPress").text('Login');
-		$("#loginButtonPress").text('New User');
-	};
-
-var aniamteFormFieldsTo = function(){
-		//Animating the form fields To their destination
-		$(".loginBox").animate({height: '570px'});
-			//$(".inputContainer").animate({height: '190px'});
-			//$(".registrationButton").animate({ 
-	       	// top: "+=50px",
-	      	//}, '400');
-	};
-
-var togglingUsernameAndRegisterationButtonText = function(){
-			//Change the button Names
-			$("#registrationButtonPress").text('Cancel');
-			$("#loginButtonPress").text('Register');
-			
-}	
-var removeFormFields = function(){
-			$('#passwordConfirmation').remove();
-			$('#emailConfirmationOne').remove();
-			$('#emailConfirmationTwo').remove();
-	
-	};
-
 //Document ready function
 $( document ).ready(function() {
 	 
@@ -90,9 +22,12 @@ $( document ).ready(function() {
 			
 			//Make sure that the username does not exist
 			
+			
 			//Confirm that both passwords are the same
 			
 			//Confirm that both email addresses are the same
+				
+				//Make sure the last 4 characters of the string ends in ".com"
 
 		}//end - if conditional
 		
@@ -144,9 +79,8 @@ $( document ).ready(function() {
 			
 			$('#emailConfirmationTwo').hide().show('slow');
 			
-			//Toggling Boolean values
-			toggleHeight = false;
-			userIsRegistering = true;
+			toggleBooleanValuesForRegistrationButtonPress();
+			
 			
 		}//end - if statement
 		
@@ -160,9 +94,9 @@ $( document ).ready(function() {
 		//Clear out inputs
 		clearOutInputs();
 		
-		toggleHeight = true;
-		userIsRegistering = false;
-		
+		//Resseting the boolean values for button press
+		resettingRegistrationValuesForButtonPress();
+
 		//Toggling login and registration button text
 		resettingUsernameAndRegistrationButtonText();
 		
