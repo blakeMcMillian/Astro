@@ -38,11 +38,11 @@ var hideFormFields = function(){
 
 var aniamteFormFieldsFrom = function(){
 	
-		$(".loginBox").animate({height: '490px'});
+		$(".loginBox").animate({height: '410px'});
 		//$(".inputContainer").animate({height: '100px'});
-		$(".registrationButton").animate({ 
-       	 top: "-=140px",
-      	}, '400');
+	//	$(".registrationButton").animate({ 
+      // 	 top: "-=50px",
+      //	}, '400');
 	};
 	
 var toggleButtonNames = function(){
@@ -53,11 +53,11 @@ var toggleButtonNames = function(){
 
 var aniamteFormFieldsTo = function(){
 		//Animating the form fields To their destination
-		$(".loginBox").animate({height: '620px'});
+		$(".loginBox").animate({height: '570px'});
 			//$(".inputContainer").animate({height: '190px'});
-			$(".registrationButton").animate({ 
-	       	 top: "+=140px",
-	      	}, '400');
+			//$(".registrationButton").animate({ 
+	       	// top: "+=50px",
+	      	//}, '400');
 	};
 
 var togglingUsernameAndRegisterationButtonText = function(){
@@ -124,15 +124,15 @@ $( document ).ready(function() {
 			aniamteFormFieldsTo();
 	
 			//Rendering registration field, and appending it within the loginbox
-			$('.inputContainer').append('<input type="password" value="" class=".loginBox input 					center-block" placeholder="Confirm Password" id="passwordConfirmation" />');
+			$('#passwordInputField').after('<input type="password" value="" class=".loginBox input 					center-block" placeholder="Confirm Password" id="passwordConfirmation" />');
 			
 			$('#passwordConfirmation').hide().show('slow');
 			
-			$('.inputContainer').append('<input type="password" value="" class=".loginBox input 					center-block" placeholder="Enter Email" id="emailConfirmationOne" />');
+			$('#passwordConfirmation').after('<input type="email" value="" class=".loginBox input 					center-block" placeholder="Enter Email" id="emailConfirmationOne" />');
 			
 			$('#emailConfirmationOne').hide().show('slow');
 			
-			$('.inputContainer').append('<input type="password" value="" class=".loginBox input 					center-block" placeholder="Confirm Email" id="emailConfirmationTwo" />');
+			$('#emailConfirmationOne').after('<input type="email" value="" class=".loginBox input 					center-block" placeholder="Confirm Email" id="emailConfirmationTwo" />');
 			
 			$('#emailConfirmationTwo').hide().show('slow');
 			
