@@ -9,6 +9,22 @@ var toggleHeight = true;
 var userIsRegistering = false;
 
 //Functions
+var renderingRegistrationFieldsAndAppendingThemToDOM = function(){
+	
+			$('#passwordInputField').after('<input type="password" value="" class=".loginBox input 					center-block" placeholder="Confirm Password" id="passwordConfirmation" />');
+			
+			$('#passwordConfirmation').hide().show('slow');
+			
+			$('#passwordConfirmation').after('<input type="email" value="" class=".loginBox input 					center-block" placeholder="Enter Email" id="emailConfirmationOne" />');
+			
+			$('#emailConfirmationOne').hide().show('slow');
+			
+			$('#emailConfirmationOne').after('<input type="email" value="" class=".loginBox input 					center-block" placeholder="Confirm Email" id="emailConfirmationTwo" />');
+			
+			$('#emailConfirmationTwo').hide().show('slow');
+	
+	};
+
 var toggleBooleanValuesForRegistrationButtonPress = function(){
 		//Toggling Boolean values
 		toggleHeight = false;
