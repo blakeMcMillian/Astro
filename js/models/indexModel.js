@@ -9,6 +9,26 @@ var toggleHeight = true;
 var userIsRegistering = false;
 
 //Functions
+var parseLoginAuthentication = function(username,password){
+		
+			//Parse login verification
+			Parse.User.logIn(username, password, {
+			 	 success: function(user) 
+				{
+			    // Do stuff after successful login.
+				alert('worked');
+			 	 },
+			  	error: function(user, error) {
+			    // The login failed. Check error to see why.
+				alert('NOT');
+		  
+			}//end - error
+		
+	    	});//end parse login function
+	
+		
+	};//end function
+	
 var renderingRegistrationFieldsAndAppendingThemToDOM = function(){
 	
 			$('#passwordInputField').after('<input type="password" value="" class=".loginBox input 					center-block" placeholder="Confirm Password" id="passwordConfirmation" />');

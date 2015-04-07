@@ -15,6 +15,8 @@ $( document ).ready(function() {
 		//Check the form fields in the dom to determine if the user is registering
 		if(userIsRegistering)
 		{
+			
+			//Getting the user's registration information
 		   	var usernameRegistration = $('#usernameInputField').val();
 		   	var passwordRegistration = $('#passwordInputField').val();
 			var passwordConfirmation = $('#passwordConfirmation').val();
@@ -31,25 +33,12 @@ $( document ).ready(function() {
 
 		}//end - if conditional
 		
-
-		//Obtaining the username and password from the user
-		var usernameLogin = $('#usernameInputField').val();
-		var passwordLogin = $('#passwordInputField').val();
+	//Obtaining the username and password from the user
+	username = $('#usernameInputField').val();
+	password = $('#passwordInputField').val();
 	
-		//Parse login verification
-		Parse.User.logIn(usernameLogin, passwordLogin, {
-		 	 success: function(user) 
-			{
-		    // Do stuff after successful login.
-			alert('worked');
-		 	 },
-		  	error: function(user, error) {
-		    // The login failed. Check error to see why.
-			alert('NOT');
-	  
-		}//end - error
-	
-    });//end parse login function
+	//Authenticating the user's credientials
+	parseLoginAuthentication(username,password);
 	
   });//end - loginButtonPress event
 
@@ -76,20 +65,21 @@ $( document ).ready(function() {
 		}//end - if statement
 		
 		else {
-		//Animating form fields FROM
-		aniamteFormFieldsFrom();
-		
-		//Hiding the form fields
-		hideFormFields();
-		
-		//Clear out inputs
-		clearOutInputs();
-		
-		//Resseting the boolean values for button press
-		resettingRegistrationValuesForButtonPress();
-
-		//Toggling login and registration button text
-		resettingUsernameAndRegistrationButtonText();
+			
+			//Animating form fields FROM
+			aniamteFormFieldsFrom();
+			
+			//Hiding the form fields
+			hideFormFields();
+			
+			//Clear out inputs
+			clearOutInputs();
+			
+			//Resseting the boolean values for button press
+			resettingRegistrationValuesForButtonPress();
+	
+			//Toggling login and registration button text
+			resettingUsernameAndRegistrationButtonText();
 		
 
 		}//end - else statement
