@@ -9,6 +9,35 @@ var toggleHeight = true;
 var userIsRegistering = false;
 
 //Functions
+var validateUser = function(userIsValid,queryUsers){
+		
+		queryUsers.find({
+			  success: function(user) {
+			    // Do stuff
+				if(user.length > 0)
+				userIsValid = false;
+			  }
+			});//end parse query
+			
+			return userIsValid;
+		
+	};//end - function
+
+var userSigninFunction = function(user){
+		
+		user.signUp(null, {
+		  success: function(user) {
+		    // Hooray! Let them use the app now.
+			alert("Registration Sucessful");
+		  },
+		  error: function(user, error) {
+		    // Show the error message somewhere and let the user try again.
+		    alert("Error: " + error.code + " " + error.message);
+		  }
+		});//end - userSignupBLock
+	
+	};
+
 var parseLoginAuthentication = function(username,password){
 		
 			//Parse login verification

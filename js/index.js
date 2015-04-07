@@ -33,14 +33,10 @@ $( document ).ready(function() {
 			//Make sure that the username does not exist
 			var queryUsers = new Parse.Query(Parse.User);
 			
+			//Querying whether or not the user exists
 			queryUsers.equalTo("username", usernameRegistration); 
-			queryUsers.find({
-			  success: function(user) {
-			    // Do stuff
-				if(user.length > 0)
-				userIsValid = false;
-			  }
-			});
+			//Determining if the user is valid
+			userIsValid = validateUser(userIsValid,queryUsers);
 			
 			if(userIsValid === true)
 			{
@@ -51,35 +47,26 @@ $( document ).ready(function() {
 				//Confirm that both email addresses are the same
 				if(emailRegistration === emailConfirmationRegistration)
 				emailIsValid = true;
-					//Make sure the last 4 characters of the string ends in ".com"
+				
+				//Make sure the last 4 characters of the string ends in ".com"
 				if(passwordIsValid && emailIsValid)
 				{
+					//Creating a new user object
 					var user = new Parse.User();
 					user.set("username", usernameRegistration);
 					user.set("password", passwordConfirmation);
 					user.set("email", emailRegistration);
 					
-					user.signUp(null, {
-					  success: function(user) {
-					    // Hooray! Let them use the app now.
-						alert("Registration Sucessful");
-					  },
-					  error: function(user, error) {
-					    // Show the error message somewhere and let the user try again.
-					    alert("Error: " + error.code + " " + error.message);
-					  }
-					});//end - userSignupBLock
+					//Signing up the new user
+					userSigninFunction(user);
 					
 				}//end - conditional
 								
 			}//end - if conditional
 			
-			
-			
-
 		}//end - if conditional
 		
-	if(userIsRegistering === false)
+	if(userIsRegistering === false)//Source code for when the user is logging in
 	{
 		//Obtaining the username and password from the user
 		username = $('#usernameInputField').val();
