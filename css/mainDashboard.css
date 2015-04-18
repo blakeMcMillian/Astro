@@ -1,8 +1,13 @@
 @charset "utf-8";
+.siteLogo {
+    font-family:Savoye LET;
+    font-size:-webkit-xxx-large;
+    color:#ecf0f1;
+}
+
 .mainSectionContainer {
     margin:68.1px 4px 4px 4px;
-    background-color:black;
-    height:1069.9px;
+    height:1069px;
 }
 
 .siteHeader {
@@ -11,8 +16,10 @@
     top:0;
     width:100%;
     z-index:100;
-    background-color:antiquewhite;
+    background-color:#34495e;
     display:block;
+    box-shadow:1px 1px 1px rgba(0,0,0,0.8);
+    padding-top:10px;
 }
 
 .contentContainer {
