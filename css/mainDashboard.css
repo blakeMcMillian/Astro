@@ -1,8 +1,20 @@
 @charset "utf-8";
+.navContainerDiv {
+    height:inherit;
+}
+
 .siteLogo {
     font-family:Savoye LET;
     font-size:-webkit-xxx-large;
     color:#ecf0f1;
+    height:inherit;
+    width:90px;
+}
+
+.navigationItem {
+    width:90px;
+    height:52px;
+    color:antiquewhite;
 }
 
 .mainSectionContainer {
@@ -19,7 +31,6 @@
     background-color:#34495e;
     display:block;
     box-shadow:1px 1px 1px rgba(0,0,0,0.8);
-    padding-top:10px;
 }
 
 .contentContainer {
