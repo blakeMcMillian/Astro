@@ -13,11 +13,11 @@
 }
 
 .navigationBarList {
-    width:85px;
+    width:560px;
     height:90px;
     color:antiquewhite;
     list-style-type:none;
-    margin:0px;
+    margin:16px 0px 0px 0px;
     padding:0px 0px 0px 0px;
 }
 
@@ -28,7 +28,7 @@
          -o-margin-before:none;
         -ms-margin-before:none;
             margin-before:none;
-    padding-right:30px;
+    padding-right:80px;
 }
 
 .mainSectionContainer {
