@@ -1,9 +1,30 @@
 @charset "utf-8";
-.mainSiteContainer {
-    height:1138px;
+.mainSectionContainer {
+    margin:68.1px 4px 4px 4px;
+    background-color:black;
+}
+
+.siteHeader {
+    position:fixed;
+    height:68px;
+    top:0;
+    width:100%;
+    z-index:100;
+    background-color:antiquewhite;
+    display:block;
+}
+
+.contentContainer {
+    height:1070px;
 }
 
 body {
     background-color:#ecf0f1;
+}
+
+.bodyContainer {
+    height:1138px;
+    overflow-x:hidden;
+    overflow-y:hidden;
 }
 
