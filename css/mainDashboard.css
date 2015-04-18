@@ -5,26 +5,40 @@
 
 .siteLogo {
     font-family:Savoye LET;
-    font-size:-webkit-xxx-large;
+    font-size:6em;
     color:#ecf0f1;
     height:inherit;
     width:90px;
+    padding-top:0px;
 }
 
-.navigationItem {
-    width:90px;
-    height:52px;
+.navigationBarList {
+    width:85px;
+    height:90px;
     color:antiquewhite;
+    list-style-type:none;
+    margin:0px;
+    padding:0px 0px 0px 0px;
+}
+
+.navigationBarList li {
+    display:inline;
+    -webkit-margin-before:none;
+       -moz-margin-before:none;
+         -o-margin-before:none;
+        -ms-margin-before:none;
+            margin-before:none;
+    padding-right:30px;
 }
 
 .mainSectionContainer {
-    margin:68.1px 4px 4px 4px;
     height:1069px;
+    margin-top:131px;
 }
 
 .siteHeader {
     position:fixed;
-    height:68px;
+    height:120px;
     top:0;
     width:100%;
     z-index:100;

@@ -1,0 +1,16 @@
+.scoreboardButtonImage, .scoreboardDarkButtonImage{
+	background: url(../imgs/navigationBar/scoreboardSprite.png) no-repeat;
+}
+
+.scoreboardButtonImage{
+	background-position: 0 0;
+	width: 75px;
+	height: 75px;
+}
+
+.scoreboardDarkButtonImage{
+	background-position: 0 -75px ;
+	width: 75px;
+	height: 75px;
+}
+
