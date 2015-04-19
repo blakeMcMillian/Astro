@@ -1793,6 +1793,7 @@ ul {
     margin-top:0;
     margin-bottom:10px;
     width:inherit;
+    white-space:nowrap;
 }
 
 ol ol,

@@ -12,28 +12,9 @@
     padding-top:0px;
 }
 
-.navigationBarList {
-    width:560px;
-    height:90px;
-    color:antiquewhite;
-    list-style-type:none;
-    margin:16px 0px 0px 0px;
-    padding:0px 0px 0px 0px;
-}
-
-.navigationBarList li {
-    display:inline;
-    -webkit-margin-before:none;
-       -moz-margin-before:none;
-         -o-margin-before:none;
-        -ms-margin-before:none;
-            margin-before:none;
-    padding-right:80px;
-}
-
 .mainSectionContainer {
     height:1069px;
-    margin-top:131px;
+    margin-top:123px;
 }
 
 .siteHeader {
@@ -47,12 +28,14 @@
     box-shadow:1px 1px 1px rgba(0,0,0,0.8);
 }
 
-.contentContainer {
-    height:1070px;
-}
-
 body {
     background-color:#ecf0f1;
+}
+
+.navBarItems {
+    height:95px;
+    width:80px;
+    margin-top:15px;
 }
 
 .bodyContainer {
