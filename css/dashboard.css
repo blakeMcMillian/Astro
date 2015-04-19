@@ -1,0 +1,30 @@
+@charset "utf-8";
+.rankLevelSection {
+    height:63px;
+    padding-top:50px;
+}
+
+.profileImageSection {
+    height:560px;
+}
+
+.profileImageSection div {
+    height:550px;
+    width:550px;
+}
+
+div h2 {
+    padding-left:19px;
+    font-family:Helvetica Neue;
+    font-weight:300;
+}
+
+div img {
+    padding-top:11px;
+    padding-left:55px;
+}
+
+body {
+    color:#555;
+}
+
