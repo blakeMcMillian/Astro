@@ -13,7 +13,10 @@
 }
 
 .mainSectionContainer {
-    height:1200px;
+    height:710px;
+    overflow:scroll;
+    overflow-x:scroll;
+    overflow-y:scroll;
 }
 
 .siteHeader {
@@ -37,9 +40,9 @@ body {
 }
 
 .bodyContainer {
-    height:1138px;
-    overflow-x:hidden;
-    overflow-y:hidden;
+    height:950px;
+    overflow-x:scroll;
+    overflow-y:scroll;
 }
 
 @media(max-width:767px) {

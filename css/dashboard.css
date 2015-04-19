@@ -1,4 +1,7 @@
 @charset "utf-8";
+.starImage {
+}
+
 .rankLevelSection {
     height:63px;
 }
@@ -35,5 +38,11 @@ div img {
 
 body {
     color:#555;
+}
+
+@media(max-width:767px) {
+    .starImage {
+        display:none;
+    }
 }
 
