@@ -45,3 +45,13 @@ body {
     overflow-y:hidden;
 }
 
+
+@media(max-width:767px){
+
+	.siteHeader{
+		height:240px;	
+
+	}
+
+}
+
