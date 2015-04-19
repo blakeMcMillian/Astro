@@ -31,7 +31,7 @@
 		<link rel="stylesheet" href="css/siteDefaults.css" />
 		<link rel="stylesheet" href="css/sprites.css" />
 		<link rel="stylesheet" href="css/dashboard.css" />
-		<link rel="stylesheet" type="text/css" href="assets/css/pro-bars.min.css" media="all" />
+		<link href="assets/css/pro-bars.min.css" rel="stylesheet" type="text/css" media="all" />
 	</head>
 	<body class="bodyContainer">
 		<div class="siteHeader">
@@ -73,31 +73,35 @@
 				</div>
 			</div>
 		</div>
-		<div class="mainSectionContainer container-lg-desktop row">
+		<div class="mainSectionContainer container-fluid">
 			<div class="rankLevelSection row">
-				<div class="col-sm-2">
+				<div class="col-sm-1">
 					<h2>Rank</h2>
 				</div>
-				<div class="col-sm-1 col-sm-offset-7">
+				<div class="col-sm-1 col-sm-offset-8">
 					<h2>Level</h2>
 				</div>
-				<div class="col-sm-1">
+				<div class="col-sm-1 col-sm-offset-1">
 					<img src="./imgs/dashboard/star.png" /></div>
 			</div>
 			<div class="profileImageSection row">
 				<div class="col-md-offset-4">
 					<img src="./imgs/dashboard/profileImage.png" /></div>
 			</div>
-			<div>
-				<h2 class="col-md-offset-5 col-md-4">Username</h2>
+			<div class="row">
+				<div>
+					<h2 class="col-md-offset-5 col-md-4">Username</h2>
+				</div>
 			</div>
-			<div>
+			<div class="row">
 				<h2 class="col-md-4">Progress...</h2>
 			</div>
-			<div class="col-md-12">
-				<div class="pro-bar-container color-silver">
-					<div style="width: 40%;" class="pro-bar bar-20 color-midnight-blue animated" data-pro-bar-percent="40" data-pro-bar-delay="800">
-						<div class="pro-bar-candy"></div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="pro-bar-container color-silver">
+						<div style="width: 40%;" class="pro-bar bar-20 color-midnight-blue animated" data-pro-bar-percent="40" data-pro-bar-delay="800">
+							<div class="pro-bar-candy"></div>
+						</div>
 					</div>
 				</div>
 			</div>

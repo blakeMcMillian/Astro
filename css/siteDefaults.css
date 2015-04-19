@@ -14,18 +14,15 @@
 
 .mainSectionContainer {
     height:1200px;
-    margin-top:118px;
 }
 
 .siteHeader {
-    position:fixed;
     height:120px;
-    top:0px;
     width:101.4%;
-    z-index:100;
     background-color:#34495e;
     display:block;
     box-shadow:1px 1px 1px rgba(0,0,0,0.8);
+    overflow:hidden;
 }
 
 body {
@@ -45,13 +42,9 @@ body {
     overflow-y:hidden;
 }
 
-
-@media(max-width:767px){
-
-	.siteHeader{
-		height:240px;	
-
-	}
-
+@media(max-width:767px) {
+    .siteHeader {
+        height:240px;
+    }
 }
 
