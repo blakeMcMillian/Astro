@@ -1,27 +1,35 @@
 @charset "utf-8";
 .rankLevelSection {
     height:63px;
-    padding-top:50px;
+}
+
+.usernameText {
+    text-align:center;
+    padding-left:none;
 }
 
 .profileImageSection {
-    height:560px;
+    height:450px;
 }
 
 .profileImageSection div {
-    height:550px;
-    width:550px;
+    height:450px;
+    width:450px;
 }
 
-div h2 {
-    padding-left:19px;
+.rankLevelSection h2 {
+    padding-left:14px;
     font-family:Helvetica Neue;
     font-weight:300;
 }
 
 div img {
     padding-top:11px;
-    padding-left:55px;
+    padding-left:0px;
+}
+
+.profileImageSection img {
+    align-self:center;
 }
 
 body {
