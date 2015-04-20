@@ -13,8 +13,8 @@
 }
 
 .mainSectionContainer {
-    height:710px;
-    overflow:scroll;
+    height:800px;
+    overflow:visible;
     overflow-x:scroll;
     overflow-y:scroll;
 }

@@ -45,66 +45,31 @@
     height:75px;
 }
 
-.optionsButton{
-	background: url(../imgs/navigationBar/optionsSprite.png) no-repeat;
-	display:block;
-      height:75px;
-      width:75px;
+.optionsButton {
+    background:url(../imgs/navigationBar/optionsSprite.png) no-repeat;
+    display:block;
+    height:75px;
+    width:75px;
 }
 
 .optionsButton:hover,
-.optionsButton:focus{
-	background-position: 0 -76px;
-	width: 75px;
-	height: 75px;
+.optionsButton:focus {
+    background-position:0 -76px;
+    width:75px;
+    height:75px;
 }
 
-
-.dashboardButton{
-	background: url(../imgs/navigationBar/dashboardSprite.png) no-repeat;
-	display:block;
-      height:75px;
-      width:75px;
+.dashboardButton {
+    background:url(../imgs/navigationBar/dashboardSprite.png) no-repeat;
+    display:block;
+    height:75px;
+    width:75px;
 }
 
 .dashboardButton:hover,
-.dashboardButton:focus{
-	background-position: 0 -76px;
-	width: 75px;
-	height: 75px;
+.dashboardButton:focus {
+    background-position:0 -76px;
+    width:75px;
+    height:75px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
