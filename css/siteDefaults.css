@@ -14,9 +14,6 @@
 
 .mainSectionContainer {
     height:1000px;
-    overflow:visible;
-    overflow-x:scroll;
-    overflow-y:scroll;
 }
 
 .siteHeader {
@@ -25,7 +22,7 @@
     background-color:#34495e;
     display:block;
     box-shadow:1px 1px 1px rgba(0,0,0,0.8);
-    overflow:hidden;
+    overflow:auto;
 }
 
 body {
@@ -41,8 +38,6 @@ body {
 
 .bodyContainer {
     height:950px;
-    overflow-x:scroll;
-    overflow-y:scroll;
 }
 
 @media(max-width:767px) {
