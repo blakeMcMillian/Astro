@@ -44,9 +44,11 @@ var parseLoginAuthentication = function(username,password){
 			Parse.User.logIn(username, password, {
 			 	 success: function(user) 
 				{
-			    // Do stuff after successful login.
-				alert('worked');
-			 	 },
+			       // Do stuff after successful login.
+				  alert('worked');
+				  window.location.href = "dashboard.html"
+				
+			 	},
 			  	error: function(user, error) {
 			    // The login failed. Check error to see why.
 				alert('NOT');
