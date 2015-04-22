@@ -1,6 +1,6 @@
 @charset "utf-8";
 .skillsHeader {
-    margin-top:180px;
+    margin-top:125px;
     z-index:0;
     display:run-in;
     position:absolute;
@@ -13,26 +13,30 @@
 
 div h2 {
     font-family:Helvetica Neue;
-    font-size:-webkit-xxx-large;
-    font-weight:normal;
-    padding-left:49px;
+    font-size:5em;
+    font-weight:lighter;
+    padding-left:50px;
 }
 
 li {
+}
+
+.skillLabelListItem {
     margin-bottom:-15px;
 }
 
 li p {
-    padding-top:22px;
-    font-size:x-large;
+    padding-top:13px;
+    font-size:3em;
 }
 
 .mainSectionContainer ul {
-    margin-top:230px;
+    margin-top:237px;
 }
 
 .starList {
-    padding:25px 4px 4px 4px;
+    padding:13px 4px 26px 122px;
+    margin-top:26px;
 }
 
 body {
