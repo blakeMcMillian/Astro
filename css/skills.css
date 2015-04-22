@@ -21,6 +21,20 @@ div h2 {
 li {
 }
 
+li span {
+    display:block;
+    width:362px;
+    height:65px;
+    background:url(../imgs/skills/star.png) 0 0;
+}
+
+li span span {
+    display:block;
+    height:65px;
+    width:50%;
+    background:url(../imgs/skills/starBold.png) 0 0p;
+}
+
 .skillLabelListItem {
     margin-bottom:-15px;
 }
