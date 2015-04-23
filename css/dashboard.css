@@ -1,5 +1,10 @@
 @charset "utf-8";
+h2 {
+    white-space:nowrap;
+}
+
 .starImage {
+    padding-left:20px;
 }
 
 .rankLevelSection {
@@ -29,7 +34,7 @@
 
 div img {
     padding-top:11px;
-    padding-left:0px;
+    padding-left:-5px;
 }
 
 .profileImageSection img {
