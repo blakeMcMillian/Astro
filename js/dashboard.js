@@ -43,5 +43,4 @@ $( document ).ready(function() {
 	$("#progressbarField").attr('data-pro-bar-percent', progress);
 
 	$('#profilePicture').attr("src",currentUser.get("profilePicture").url());
-	alert(currentUser.get("profilePicture").url());
-});
+	});

@@ -45,8 +45,7 @@ var parseLoginAuthentication = function(username,password){
 			 	 success: function(user) 
 				{
 			       // Do stuff after successful login.
-				  alert('worked');
-				  window.location.href = "dashboard.html"
+				 	window.location.href = "dashboard.html"
 				
 			 	},
 			  	error: function(user, error) {
