@@ -42,4 +42,6 @@ $( document ).ready(function() {
 	//Setting the progressbar with data from parse
 	$("#progressbarField").attr('data-pro-bar-percent', progress);
 
+	$('#profilePicture').attr("src",currentUser.get("profilePicture").url());
+	alert(currentUser.get("profilePicture").url());
 });
