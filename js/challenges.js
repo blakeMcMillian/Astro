@@ -2,50 +2,79 @@
  * @author
  */
 $( document ).ready(function() {
+
+	//Reinitilizng Parse
+	Parse.initialize("l3iYSEoRauE5ctDyD6CwojGCGIyJHxeCmgEMhnjZ", "prAydsNAqfn6j4BYudc9iJhvavc0C5IcMUyOC6Yj");
+
+	var user = Parse.User.current();
 	
 	//Detecting page click on challenges
 	$("#criticalthinkingbutton").click(function(){
        	//Do stuff when clicked
-		sessionStorage.setItem("challenge", "Critical Thinking");
-    	});
+		user.set('currentChallenge','Critical Thinking');
+		user.save(null, {
+		  success: function(user) {
+		    // Execute any logic that should take place after the object is saved.
+		    alert('New object created with objectId: ' + user.id);
+		  }
+		});
+		user.fetch();
+
+
+});
 	
 	//Detecting page click on challenges
 	$("#memorybutton").click(function(){
        	//Do stuff when clicked
-		sessionStorage.setItem("challenge", "Memory");
-    	});
+		user.set('currentChallenge','Memory');
+		user.save(null, {
+		  success: function(user) {
+		    // Execute any logic that should take place after the object is saved.
+		    alert('New object created with objectId: ' + user.id);
+		  }
+		});
+		user.fetch();
+	});
 
 	//Detecting page click on challenges
 	$("#recognitionbutton").click(function(){
        	//Do stuff when clicked
-		sessionStorage.setItem("challenge", "Recognition");
-    	});
+		user.set('currentChallenge','Recognition');
+		user.save(null, {
+		  success: function(user) {
+		    // Execute any logic that should take place after the object is saved.
+		    alert('New object created with objectId: ' + user.id);
+		  }
+		});
+
+		user.fetch();
+	});
 
 	//Detecting page click on challenges
-	$("#definitionbutton").click(function(){
+	$("#definitionsbutton").click(function(){
        	//Do stuff when clicked
-		sessionStorage.setItem("challenge", "Definitions");
+		user.set('currentChallenge','Definition');
+		user.save(null, {
+		  success: function(user) {
+		    // Execute any logic that should take place after the object is saved.
+		    alert('New object created with objectId: ' + user.id);
+		  }
+		});
+		user.fetch();
     });
 
     //Detecting page click on challenges
 	$("#aboveandbeyondbutton").click(function(){
        	//Do stuff when clicked
-		sessionStorage.setItem("challenge", "Above and Above");
+		user.set('currentChallenge','Above and Beyond');
+		user.save(null, {
+		  success: function(user) {
+		    // Execute any logic that should take place after the object is saved.
+		    alert('New object created with objectId: ' + user.id);
+		  }
+		});
+		user.fetch();
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	
    
 });

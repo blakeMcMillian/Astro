@@ -1,0 +1,34 @@
+@charset "utf-8";
+.pageLabelAndImageContainer {
+    margin-top:110px;
+    height:400px;
+}
+
+div h2 {
+    font-family:Helvetica Neue;
+    font-size:-webkit-xxx-large;
+    font-weight:100;
+    padding-left:49px;
+}
+
+li {
+    margin-bottom:29px;
+}
+
+li a {
+    margin-right:19px;
+}
+
+li p {
+    padding-top:19px;
+    font-size:x-large;
+}
+
+.mainSectionContainer ul {
+    margin-top:23px;
+}
+
+body {
+    color:#555;
+}
+
