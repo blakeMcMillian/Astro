@@ -7585,6 +7585,7 @@ button.close {
 .panel-body:after,
 .row:after {
     clear:both;
+    width:inherit;
 }
 
 .center-block {

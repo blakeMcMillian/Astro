@@ -1,4 +1,49 @@
 @charset "utf-8";
+.button_1 {
+    border-radius:20px;
+    width:47px;
+    height:41px;
+    background-color:#3498db;
+}
+
+.button_2 {
+    border-radius:20px;
+    width:47px;
+    height:41px;
+    background-color:#e74c3c;
+}
+
+.button_3 {
+    border-radius:20px;
+    width:47px;
+    height:41px;
+    background-color:#2ecc71;
+}
+
+.button_4 {
+    border-radius:20px;
+    width:47px;
+    height:41px;
+    background-color:#9b59b6;
+}
+
+.answerchoiceContainer {
+    margin-top:16px;
+    height:180px;
+}
+
+.questionText {
+    margin-top:25px;
+    white-space:normal;
+}
+
+.questionContainer {
+    width:350;
+    height:250px;
+    background:#BFBFBF;
+    box-shadow:2px 2px 8px 1px rgba(128, 128, 128, 1.00);
+}
+
 .pageLabelAndImageContainer {
     margin-top:110px;
     height:400px;
@@ -6,9 +51,9 @@
 
 div h2 {
     font-family:Helvetica Neue;
-    font-size:-webkit-xxx-large;
+    font-size:x-large;
     font-weight:100;
-    padding-left:49px;
+    padding-left:67px;
 }
 
 li {
