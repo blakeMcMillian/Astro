@@ -59,11 +59,15 @@
 				</h2>
 			</div>
 			<div class="middleContainer container-fluid">
-				<button class="buttonPrevious col-sm-1">button</button>
+				<div class="col-sm-1">
+					<button class="buttonPrevious col-sm-1">&lt;</button>
+				</div>
 				<div class="col-sm-offset-1 col-sm-7 questionContainer ">
 					<p class="col-sm-offset-1 col-sm-10 questionText">procedure bubbleSort( A : list of sortable items ) n = length(A) repeat swapped = false for i = 1 to n-1 inclusive do /* if this pair is out of order */ if A[i-1] &gt; A[i] then /* swap them and remember something changed */ swap( A[i-1], A[i] ) swapped = true end if end for until not swapped end procedure</p>
 				</div>
-				<button class="buttonNext col-sm-1 col-sm-offset-2">button</button>
+				<div class="col-sm-1 col-sm-offset-2">
+					<button class="buttonNext ">&gt;</button>
+				</div>
 			</div>
 			<div class="col-sm-9 col-sm-offset-2 row answerchoiceContainer">
 				<ul class="list-unstyled">
