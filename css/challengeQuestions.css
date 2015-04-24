@@ -1,4 +1,13 @@
 @charset "utf-8";
+.submissionAnchor {
+    margin-left:3px;
+}
+
+a p {
+    text-align:center;
+    padding:75px 4px 4px 4px;
+}
+
 .button_1 {
     border-radius:20px;
     width:47px;
@@ -47,9 +56,18 @@
     margin:95px 4px 4px 4px;
 }
 
+.buttonSubmit {
+    border-radius:42px;
+    width:96px;
+    height:120px;
+    background-color:#ecf0f1;
+    margin:0px 4px 4px 4px;
+}
+
 .answerchoiceContainer {
     margin-top:20px;
-    height:190px;
+    height:500px;
+    display:block;
 }
 
 .questionText {
@@ -65,7 +83,8 @@
 }
 
 .middleContainer {
-    height:230px;
+    height:250px;
+    display:block;
 }
 
 .buttonNext {
