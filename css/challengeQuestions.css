@@ -4,6 +4,7 @@
     width:47px;
     height:41px;
     background-color:#3498db;
+    margin:4px;
 }
 
 .button_2 {
@@ -11,6 +12,7 @@
     width:47px;
     height:41px;
     background-color:#e74c3c;
+    margin:4px;
 }
 
 .button_3 {
@@ -18,6 +20,7 @@
     width:47px;
     height:41px;
     background-color:#2ecc71;
+    margin:4px;
 }
 
 .button_4 {
@@ -25,11 +28,12 @@
     width:47px;
     height:41px;
     background-color:#9b59b6;
+    margin:4px;
 }
 
 .answerchoiceContainer {
-    margin-top:16px;
-    height:180px;
+    margin-top:20px;
+    height:190px;
 }
 
 .questionText {
@@ -57,7 +61,8 @@ div h2 {
 }
 
 li {
-    margin-bottom:29px;
+    margin-bottom:44px;
+    border:solid 1px #9b59b6;
 }
 
 li a {
