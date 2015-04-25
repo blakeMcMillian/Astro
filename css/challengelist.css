@@ -12,7 +12,7 @@ div h2 {
 }
 
 li {
-    margin-bottom:29px;
+    margin-bottom:10px;
 }
 
 li a {
@@ -22,10 +22,16 @@ li a {
 li p {
     padding-top:19px;
     font-size:x-large;
+    height:inherit;
+}
+
+.listHeader {
+    text-align:left;
+    font-family:Al Bayan;
 }
 
 .mainSectionContainer ul {
-    margin-top:23px;
+    margin-top:24px;
 }
 
 body {

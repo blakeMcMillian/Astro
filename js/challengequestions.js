@@ -10,11 +10,12 @@ $( document ).ready(function() {
 	var questionArray = new Array();
 	var userSelections = new Array();
 	var numericalPosition = 0;
+	var currentUser = Parse.User.current();
 
 	 var challengeQuestions = Parse.Object.extend("Questions");
 	 var query = new Parse.Query(challengeQuestions);
 	 query.ascending("order");
-	 query.equalTo("challengeId", "RW5rRUpIU9");
+	 query.equalTo("challengeId", currentUser.get('currentChallengeActive'));
 	 query.find({
  	 success: function(results) {
     // comments now contains the comments for myPost
@@ -50,6 +51,8 @@ $( document ).ready(function() {
 	    if(pagePosition < questionArray.length)
 	    {
 
+	    	$('.questionContainer').hide().show("slide", { direction: "left" }, 200);
+	    	$('.buttonNext').css({position: 'static'});
 	    	//Incrementing the page count
 	    	pagePosition++;
 	    	//numericalPosition = questionArray.length - pagePosition;
@@ -113,7 +116,8 @@ $( document ).ready(function() {
 
 		if(pagePosition > 1)
 	    {
-
+	    	$('.questionContainer').hide().show("slide", { direction: "right" }, 200);
+	    	$('.buttonNext').css({position: 'absolute'});
 	    	//Incrementing the page count
 	    	pagePosition--;
 	    	if(!userSelections[pagePosition-1])
@@ -175,6 +179,7 @@ $( document ).ready(function() {
 	$(".button_1").click(function(e){
 
 		userSelections[pagePosition-1] = 'one';
+		
 
 		jQuery('#choice1').css('opacity', '1.0');
 		jQuery('#choice2').css('opacity', '0.5');
@@ -186,6 +191,7 @@ $( document ).ready(function() {
 	$(".button_2").click(function(e){
 	
 		userSelections[pagePosition-1] = 'two';
+		
 
 		jQuery('#choice1').css('opacity', '0.5');
 		jQuery('#choice2').css('opacity', '1.0');
@@ -197,6 +203,7 @@ $( document ).ready(function() {
 	$(".button_3").click(function(e){
 		
 		userSelections[pagePosition-1] = 'three';
+		
 
 		jQuery('#choice1').css('opacity', '0.5');
 		jQuery('#choice2').css('opacity', '0.5');
@@ -208,6 +215,7 @@ $( document ).ready(function() {
 	$(".button_4").click(function(e){
 
 		userSelections[pagePosition-1] = 'four';
+		
 
 		jQuery('#choice1').css('opacity', '0.5');
 		jQuery('#choice2').css('opacity', '0.5');
@@ -217,11 +225,8 @@ $( document ).ready(function() {
 	});
 
 	$(".buttonSubmit").click(function(e){
+		location.href = "challengeevaluation.html";
 
-		for(var i =0; i < userSelections.length;i++)
-		{
-			alert(userSelections[i]);
-		}
 	    
 	});
 
