@@ -1,4 +1,16 @@
 @charset "utf-8";
+#skillCircle {
+    height:80px;
+}
+
+#skillCircle strong {
+    text-align:left;
+}
+
+#scoreCircle {
+    height:80px;
+}
+
 h2 {
     white-space:nowrap;
 }

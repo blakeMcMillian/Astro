@@ -13,7 +13,7 @@
 }
 
 .mainSectionContainer {
-    height:1000px;
+    height:550px;
 }
 
 .siteHeader {
@@ -37,7 +37,7 @@ body {
 }
 
 .bodyContainer {
-    height:950px;
+    height:700px;
 }
 
 @media(max-width:767px) {

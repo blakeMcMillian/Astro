@@ -44,14 +44,27 @@ $( document ).ready(function() {
 
 	$('#profilePicture').attr("src",currentUser.get("profilePicture").url());
 
-	 $('#circle').circleProgress({
+	 $('#skillCircle').circleProgress({
         value: 0.75,
         size: 80,
         fill: {
             gradient: ["red", "orange"]
         }
-        
-    });
+
+    }).on('circle-animation-progress', function(event, progress) {
+    $(this).find('strong').html(parseInt(100 * progress) + '<i>%</i>');
+});
+    $('#scoreCircle').circleProgress({
+        value: 0.75,
+        size: 80,
+        fill: {
+            gradient: ["blue", "green"]
+        }
+
+    }).on('circle-animation-progress', function(event, progress) {
+    $(this).find('strong').html(parseInt(100 * progress) + '<i>%</i>');
+});
+	 
 
 
 
