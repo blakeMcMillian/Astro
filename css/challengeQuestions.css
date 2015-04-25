@@ -14,6 +14,11 @@ a p {
     height:41px;
     background-color:#3498db;
     margin:4px;
+    display:inline-block;
+}
+
+button p {
+    color:antiquewhite;
 }
 
 .button_2 {
@@ -22,6 +27,10 @@ a p {
     height:41px;
     background-color:#e74c3c;
     margin:4px;
+}
+
+li button {
+    padding-bottom:12px;
 }
 
 .button_3 {
@@ -110,6 +119,7 @@ div h2 {
 li {
     margin-bottom:25px;
     border:solid 1px transparent;
+    color:black;
 }
 
 li a {
@@ -117,7 +127,7 @@ li a {
 }
 
 li p {
-    padding-top:25px;
+    padding-top:-3px;
     font-size:small;
     display:inline-block;
     white-space:normal;
@@ -126,8 +136,10 @@ li p {
     word-wrap:break-word;
 }
 
-.topQuestionChoice {
-    padding-top:36px;
+.questionChoiceOne {
+    padding-top:32px;
+    height:inherit;
+    text-align:left;
 }
 
 .answerText {
