@@ -21,8 +21,9 @@ $( document ).ready(function() {
     for (var i = 0; i < results.length; i++) 
     { 
     	//pushing empty elements into the array
-    	userSelections.push = "";
-      questionArray.push(results[i]);
+    	userSelections.push = ('empty');
+        questionArray.push(results[i]);
+        numericalPosition = pagePosition;
      // Load the inital questionsPrompt
      if(i === results.length-1){
      		 $('#questionInstructions').text(pagePosition);
@@ -48,15 +49,51 @@ $( document ).ready(function() {
 	    
 	    if(pagePosition < questionArray.length)
 	    {
-	    	//Resetting the opacity
-	    	jQuery('#choice1').css('opacity', '1.0');
-			jQuery('#choice2').css('opacity', '1.0');
-			jQuery('#choice3').css('opacity', '1.0');
-			jQuery('#choice4').css('opacity', '1.0');
 
 	    	//Incrementing the page count
 	    	pagePosition++;
-	    	numericalPosition = questionArray.length - pagePosition;
+	    	//numericalPosition = questionArray.length - pagePosition;
+	  
+	    	//Resetting the opacity
+	    	if(!userSelections[pagePosition-1])
+	    	{
+	    		jQuery('#choice1').css('opacity', '1.0');
+				jQuery('#choice2').css('opacity', '1.0');
+				jQuery('#choice3').css('opacity', '1.0');
+				jQuery('#choice4').css('opacity', '1.0');
+	    	}
+	    	//Resetting the opacity
+	    	if(userSelections[pagePosition-1] === "one")
+	    	{
+	    		jQuery('#choice1').css('opacity', '1.0');
+				jQuery('#choice2').css('opacity', '0.5');
+				jQuery('#choice3').css('opacity', '0.5');
+				jQuery('#choice4').css('opacity', '0.5');
+	    	}
+	    	//Resetting the opacity
+	    	if(userSelections[pagePosition-1] === "two")
+	    	{
+	    		jQuery('#choice1').css('opacity', '0.5');
+				jQuery('#choice2').css('opacity', '1.0');
+				jQuery('#choice3').css('opacity', '0.5');
+				jQuery('#choice4').css('opacity', '0.5');
+	    	}
+	    	//Resetting the opacity
+	    	if(userSelections[pagePosition-1] === "three")
+	    	{
+	    		jQuery('#choice1').css('opacity', '0.5');
+				jQuery('#choice2').css('opacity', '0.5');
+				jQuery('#choice3').css('opacity', '1.0');
+				jQuery('#choice4').css('opacity', '0.5');
+	    	}
+	    	//Resetting the opacity
+	    	if(userSelections[pagePosition-1] === "four")
+	    	{
+	    		jQuery('#choice1').css('opacity', '0.5');
+				jQuery('#choice2').css('opacity', '0.5');
+				jQuery('#choice3').css('opacity', '0.5');
+				jQuery('#choice4').css('opacity', '1.0');
+	    	}
 
 	    	$('#questionInstructions').text(pagePosition);
 		      //Load the inital question
@@ -76,14 +113,49 @@ $( document ).ready(function() {
 
 		if(pagePosition > 1)
 	    {
-	    	//Resetting the opacity
-	    	jQuery('#choice1').css('opacity', '1.0');
-			jQuery('#choice2').css('opacity', '1.0');
-			jQuery('#choice3').css('opacity', '1.0');
-			jQuery('#choice4').css('opacity', '1.0');
+
 	    	//Incrementing the page count
 	    	pagePosition--;
-	    	numericalPosition = questionArray.length - pagePosition;
+	    	if(!userSelections[pagePosition-1])
+	    	{
+	    		jQuery('#choice1').css('opacity', '1.0');
+				jQuery('#choice2').css('opacity', '1.0');
+				jQuery('#choice3').css('opacity', '1.0');
+				jQuery('#choice4').css('opacity', '1.0');
+	    	}
+	    	//Resetting the opacity
+	    	if(userSelections[pagePosition-1] === "one")
+	    	{
+	    		jQuery('#choice1').css('opacity', '1.0');
+				jQuery('#choice2').css('opacity', '0.5');
+				jQuery('#choice3').css('opacity', '0.5');
+				jQuery('#choice4').css('opacity', '0.5');
+	    	}
+	    	//Resetting the opacity
+	    	if(userSelections[pagePosition-1] === "two")
+	    	{
+	    		jQuery('#choice1').css('opacity', '0.5');
+				jQuery('#choice2').css('opacity', '1.0');
+				jQuery('#choice3').css('opacity', '0.5');
+				jQuery('#choice4').css('opacity', '0.5');
+	    	}
+	    	//Resetting the opacity
+	    	if(userSelections[pagePosition-1] === "three")
+	    	{
+	    		jQuery('#choice1').css('opacity', '0.5');
+				jQuery('#choice2').css('opacity', '0.5');
+				jQuery('#choice3').css('opacity', '1.0');
+				jQuery('#choice4').css('opacity', '0.5');
+	    	}
+	    	//Resetting the opacity
+	    	if(userSelections[pagePosition-1] === "four")
+	    	{
+	    		jQuery('#choice1').css('opacity', '0.5');
+				jQuery('#choice2').css('opacity', '0.5');
+				jQuery('#choice3').css('opacity', '0.5');
+				jQuery('#choice4').css('opacity', '1.0');
+	    	}
+	    	
 
 	    	$('#questionInstructions').text(pagePosition);
 		      //Load the inital question
@@ -102,7 +174,8 @@ $( document ).ready(function() {
 
 	$(".button_1").click(function(e){
 
-		userSelections[numericalPosition] = 'one';
+		userSelections[pagePosition-1] = 'one';
+		alert(pagePosition);
 
 		jQuery('#choice1').css('opacity', '1.0');
 		jQuery('#choice2').css('opacity', '0.5');
@@ -113,8 +186,8 @@ $( document ).ready(function() {
 	});
 	$(".button_2").click(function(e){
 	
-		userSelections[numericalPosition] = 'two';
-
+		userSelections[pagePosition-1] = 'two';
+		alert(pagePosition);
 		jQuery('#choice1').css('opacity', '0.5');
 		jQuery('#choice2').css('opacity', '1.0');
 		jQuery('#choice3').css('opacity', '0.5');
@@ -124,7 +197,8 @@ $( document ).ready(function() {
 	});
 	$(".button_3").click(function(e){
 		
-		userSelections[numericalPosition] = 'three';
+		userSelections[pagePosition-1] = 'three';
+		alert(pagePosition);
 
 		jQuery('#choice1').css('opacity', '0.5');
 		jQuery('#choice2').css('opacity', '0.5');
@@ -135,12 +209,22 @@ $( document ).ready(function() {
 	});
 	$(".button_4").click(function(e){
 
-		userSelections[numericalPosition] = 'four';
+		userSelections[pagePosition-1] = 'four';
+		alert(pagePosition);
 
 		jQuery('#choice1').css('opacity', '0.5');
 		jQuery('#choice2').css('opacity', '0.5');
 		jQuery('#choice3').css('opacity', '0.5');
 		jQuery('#choice4').css('opacity', '1.0');
+	    
+	});
+
+	$(".buttonSubmit").click(function(e){
+
+		for(var i =0; i < userSelections.length;i++)
+		{
+			alert(userSelections[i]);
+		}
 	    
 	});
 
