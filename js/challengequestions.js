@@ -175,7 +175,6 @@ $( document ).ready(function() {
 	$(".button_1").click(function(e){
 
 		userSelections[pagePosition-1] = 'one';
-		alert(pagePosition);
 
 		jQuery('#choice1').css('opacity', '1.0');
 		jQuery('#choice2').css('opacity', '0.5');
@@ -187,7 +186,7 @@ $( document ).ready(function() {
 	$(".button_2").click(function(e){
 	
 		userSelections[pagePosition-1] = 'two';
-		alert(pagePosition);
+
 		jQuery('#choice1').css('opacity', '0.5');
 		jQuery('#choice2').css('opacity', '1.0');
 		jQuery('#choice3').css('opacity', '0.5');
@@ -198,7 +197,6 @@ $( document ).ready(function() {
 	$(".button_3").click(function(e){
 		
 		userSelections[pagePosition-1] = 'three';
-		alert(pagePosition);
 
 		jQuery('#choice1').css('opacity', '0.5');
 		jQuery('#choice2').css('opacity', '0.5');
@@ -210,7 +208,6 @@ $( document ).ready(function() {
 	$(".button_4").click(function(e){
 
 		userSelections[pagePosition-1] = 'four';
-		alert(pagePosition);
 
 		jQuery('#choice1').css('opacity', '0.5');
 		jQuery('#choice2').css('opacity', '0.5');
