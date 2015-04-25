@@ -28,9 +28,12 @@ $( document ).ready(function() {
      // Load the inital questionsPrompt
      if(i === results.length-1){
      		 $('#questionInstructions').text(pagePosition);
-		      //Load the inital question
+		      //Append the html
+		      if(object.get('html'))
+		      $('questionContainer').append(object.get('html'));
+		  	  else//Load the inital question
 		      $('.questionText').text(results[i].get('question'));
-		      //Load answer choice one
+				      //Load answer choice one
 		      $('.questionChoiceOne').text(results[i].get('answerChoiceOne'));
 		      //Load answer choice two
 		      $('.questionChoiceTwo').text(results[i].get('answerChoiceTwo'));
@@ -99,16 +102,19 @@ $( document ).ready(function() {
 	    	}
 
 	    	$('#questionInstructions').text(pagePosition);
-		      //Load the inital question
-		      $('.questionText').text(questionArray[questionArray.length - pagePosition].get('question'));
-		      //Load answer choice one
-		      $('.questionChoiceOne').text(questionArray[questionArray.length - pagePosition].get('answerChoiceOne'));
+		      //Append the html
+		      if(object.get('html'))
+		      $('questionContainer').append(object.get('html'));
+		  	  else//Load the inital question
+		      $('.questionText').text(results[i].get('question'));
+				      //Load answer choice one
+		      $('.questionChoiceOne').text(results[i].get('answerChoiceOne'));
 		      //Load answer choice two
-		      $('.questionChoiceTwo').text(questionArray[questionArray.length - pagePosition].get('answerChoiceTwo'));
+		      $('.questionChoiceTwo').text(results[i].get('answerChoiceTwo'));
 		      //Load answer choice three
-		      $('.questionChoiceThree').text(questionArray[questionArray.length - pagePosition].get('answerChoiceThree'));
+		      $('.questionChoiceThree').text(results[i].get('answerChoiceThree'));
 		      //Load answer choice four
-		      $('.questionChoiceFour').text(questionArray[questionArray.length - pagePosition].get('answerChoiceFour'));
+		      $('.questionChoiceFour').text(results[i].get('answerChoiceFour'));
 	    }
 	   
 	});
@@ -162,16 +168,19 @@ $( document ).ready(function() {
 	    	
 
 	    	$('#questionInstructions').text(pagePosition);
-		      //Load the inital question
-		      $('.questionText').text(questionArray[questionArray.length - pagePosition].get('question'));
-		      //Load answer choice one
-		      $('.questionChoiceOne').text(questionArray[questionArray.length - pagePosition].get('answerChoiceOne'));
+		      //Append the html
+		      if(object.get('html'))
+		      $('questionContainer').append(object.get('html'));
+		  	  else//Load the inital question
+		      $('.questionText').text(results[i].get('question'));
+				      //Load answer choice one
+		      $('.questionChoiceOne').text(results[i].get('answerChoiceOne'));
 		      //Load answer choice two
-		      $('.questionChoiceTwo').text(questionArray[questionArray.length - pagePosition].get('answerChoiceTwo'));
+		      $('.questionChoiceTwo').text(results[i].get('answerChoiceTwo'));
 		      //Load answer choice three
-		      $('.questionChoiceThree').text(questionArray[questionArray.length - pagePosition].get('answerChoiceThree'));
+		      $('.questionChoiceThree').text(results[i].get('answerChoiceThree'));
 		      //Load answer choice four
-		      $('.questionChoiceFour').text(questionArray[questionArray.length - pagePosition].get('answerChoiceFour'));
+		      $('.questionChoiceFour').text(results[i].get('answerChoiceFour'));
 	    }
 
 	});

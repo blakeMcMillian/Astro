@@ -46,7 +46,6 @@ $( document ).ready(function() {
 	$('ul').on('click', '.challengesButton', function() 
 	{
   		var idFromClickedElement = jQuery(this).attr("id");
-  		alert(idFromClickedElement);
   		currentUser.set('currentChallengeActive',idFromClickedElement);
   		currentUser.save(null, {
 		  success: function(currentUser) {
