@@ -73,6 +73,7 @@ $( document ).ready(function() {
 					user.set('recognitionSkill',10);
 					user.set('definitionsSkill',10);
 					user.set('aboveandbeyondSkill',10);
+					user.set('criticalthinkingSkill',10);
 					user.set('level','1');
 					user.set('progress','10');
 					user.set('levelResistance',1);
