@@ -77,7 +77,7 @@ $( document ).ready(function() {
 					user.set('progress','10');
 					user.set('levelResistance',1);
 					user.set('rank',rank);
-					user.set('trueRank',1);
+					user.set('trueRank',"1");
 
 					//Signing up the new user
 					userSigninFunction(user);

@@ -39,6 +39,8 @@ $( document ).ready(function() {
 			var userLevel = parseInt(currentUser.get('level'));
 			var levelResistance = currentUser.get('levelResistance');
 			var trueRank = 0;
+			var currentdate = new Date().getTime();
+			currentUser.set('timeSinceLastChallenge',currentdate);
 
 
 
