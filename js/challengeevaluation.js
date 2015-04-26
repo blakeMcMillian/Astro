@@ -21,6 +21,8 @@ $( document ).ready(function() {
 			var numberCorrect = 0;
 			var totalQuestions = answerKey.length;
 			var totalScore = 0;
+			var userRank = 1;
+			var increment = true;
 
 			for(var i = 0; i < answerKey.length; i++){
 
@@ -48,14 +50,14 @@ $( document ).ready(function() {
 				if(challengeDifficulty === 'easy')
 				{
 					currentSkill += totalScore*2.5;
-					progress += (totalScore*5)*levelResistance;
+					userProgress += (totalScore*5)*levelResistance;
 
 					if(currentSkill > 100)
 						currentSkill = 100;
 
-					if(progress > 100)
+					if(userProgress > 100)
 					{
-						progress = 0;
+						userProgress = 0;
 						userLevel += 1;
 						if(levelResistance > 0.06)
 							levelResistance -= 0.02;
@@ -65,14 +67,14 @@ $( document ).ready(function() {
 					
 				else if(challengeDifficulty === 'medium'){
 					currentSkill += totalScore*5;
-					progress += (totalScore*10)*levelResistance;
+					userProgress += (totalScore*10)*levelResistance;
 
 					if(currentSkill > 100)
 						currentSkill = 100;
 
-					if(progress > 100)
+					if(userProgress > 100)
 					{
-						progress = 0;
+						userProgress = 0;
 						userLevel += 1;
 						if(levelResistance > 0.06)
 							levelResistance -= 0.02;
@@ -81,14 +83,14 @@ $( document ).ready(function() {
 					
 				else if(challengeDifficulty === 'hard'){
 					currentSkill += totalScore*10;
-					progress += (totalScore*50)*levelResistance;
+					userProgress += (totalScore*50)*levelResistance;
 
 					if(currentSkill > 100)
 						currentSkill = 100;
 
-					if(progress > 100)
+					if(userProgress > 100)
 					{
-						progress = 0;
+						userProgress = 0;
 						userLevel += 1;
 						if(levelResistance > 0.06)
 							levelResistance -= 0.02;
@@ -112,14 +114,14 @@ $( document ).ready(function() {
 				if(challengeDifficulty === 'easy')
 				{
 					currentSkill += totalScore*2.5;
-					progress += (totalScore*5)*levelResistance;
+					userProgress += (totalScore*5)*levelResistance;
 
 					if(currentSkill > 100)
 						currentSkill = 100;
 
-					if(progress > 100)
+					if(userProgress > 100)
 					{
-						progress = 0;
+						userProgress = 0;
 						userLevel += 1;
 						if(levelResistance > 0.06)
 							levelResistance -= 0.02;
@@ -129,14 +131,14 @@ $( document ).ready(function() {
 					
 				else if(challengeDifficulty === 'medium'){
 					currentSkill += totalScore*5;
-					progress += (totalScore*10)*levelResistance;
+					userProgress += (totalScore*10)*levelResistance;
 
 					if(currentSkill > 100)
 						currentSkill = 100;
 
-					if(progress > 100)
+					if(userProgress > 100)
 					{
-						progress = 0;
+						userProgress = 0;
 						userLevel += 1;
 						if(levelResistance > 0.06)
 							levelResistance -= 0.02;
@@ -145,14 +147,14 @@ $( document ).ready(function() {
 					
 				else if(challengeDifficulty === 'hard'){
 					currentSkill += totalScore*10;
-					progress += (totalScore*50)*levelResistance;
+					userProgress += (totalScore*50)*levelResistance;
 
 					if(currentSkill > 100)
 						currentSkill = 100;
 
-					if(progress > 100)
+					if(userProgress > 100)
 					{
-						progress = 0;
+						userProgress = 0;
 						userLevel += 1;
 						if(levelResistance > 0.06)
 							levelResistance -= 0.02;
@@ -176,14 +178,14 @@ $( document ).ready(function() {
 				if(challengeDifficulty === 'easy')
 				{
 					currentSkill += totalScore*2.5;
-					progress += (totalScore*5)*levelResistance;
+					userProgress += (totalScore*5)*levelResistance;
 
 					if(currentSkill > 100)
 						currentSkill = 100;
 
-					if(progress > 100)
+					if(userProgress > 100)
 					{
-						progress = 0;
+						userProgress = 0;
 						userLevel += 1;
 						if(levelResistance > 0.06)
 							levelResistance -= 0.02;
@@ -193,14 +195,14 @@ $( document ).ready(function() {
 					
 				else if(challengeDifficulty === 'medium'){
 					currentSkill += totalScore*5;
-					progress += (totalScore*10)*levelResistance;
+					userProgress += (totalScore*10)*levelResistance;
 
 					if(currentSkill > 100)
 						currentSkill = 100;
 
-					if(progress > 100)
+					if(userProgress > 100)
 					{
-						progress = 0;
+						userProgress = 0;
 						userLevel += 1;
 						if(levelResistance > 0.06)
 							levelResistance -= 0.02;
@@ -209,14 +211,14 @@ $( document ).ready(function() {
 					
 				else if(challengeDifficulty === 'hard'){
 					currentSkill += totalScore*10;
-					progress += (totalScore*50)*levelResistance;
+					userProgress += (totalScore*50)*levelResistance;
 
 					if(currentSkill > 100)
 						currentSkill = 100;
 
-					if(progress > 100)
+					if(userProgress > 100)
 					{
-						progress = 0;
+						userProgress = 0;
 						userLevel += 1;
 						if(levelResistance > 0.06)
 							levelResistance -= 0.02;
@@ -240,14 +242,14 @@ $( document ).ready(function() {
 				if(challengeDifficulty === 'easy')
 				{
 					currentSkill += totalScore*2.5;
-					progress += (totalScore*5)*levelResistance;
+					userProgress += (totalScore*5)*levelResistance;
 
 					if(currentSkill > 100)
 						currentSkill = 100;
 
-					if(progress > 100)
+					if(userProgress > 100)
 					{
-						progress = 0;
+						userProgress = 0;
 						userLevel += 1;
 						if(levelResistance > 0.06)
 							levelResistance -= 0.02;
@@ -257,14 +259,14 @@ $( document ).ready(function() {
 					
 				else if(challengeDifficulty === 'medium'){
 					currentSkill += totalScore*5;
-					progress += (totalScore*10)*levelResistance;
+					userProgress += (totalScore*10)*levelResistance;
 
 					if(currentSkill > 100)
 						currentSkill = 100;
 
-					if(progress > 100)
+					if(userProgress > 100)
 					{
-						progress = 0;
+						userProgress = 0;
 						userLevel += 1;
 						if(levelResistance > 0.06)
 							levelResistance -= 0.02;
@@ -273,14 +275,14 @@ $( document ).ready(function() {
 					
 				else if(challengeDifficulty === 'hard'){
 					currentSkill += totalScore*10;
-					progress += (totalScore*50)*levelResistance;
+					userProgress += (totalScore*50)*levelResistance;
 
 					if(currentSkill > 100)
 						currentSkill = 100;
 
-					if(progress > 100)
+					if(userProgress > 100)
 					{
-						progress = 0;
+						userProgress = 0;
 						userLevel += 1;
 						if(levelResistance > 0.06)
 							levelResistance -= 0.02;
@@ -304,14 +306,14 @@ $( document ).ready(function() {
 				if(challengeDifficulty === 'easy')
 				{
 					currentSkill += totalScore*2.5;
-					progress += (totalScore*5)*levelResistance;
+					userProgress += (totalScore*5)*levelResistance;
 
 					if(currentSkill > 100)
 						currentSkill = 100;
 
-					if(progress > 100)
+					if(userProgress > 100)
 					{
-						progress = 0;
+						userProgress = 0;
 						userLevel += 1;
 						if(levelResistance > 0.06)
 							levelResistance -= 0.02;
@@ -321,14 +323,14 @@ $( document ).ready(function() {
 					
 				else if(challengeDifficulty === 'medium'){
 					currentSkill += totalScore*5;
-					progress += (totalScore*10)*levelResistance;
+					userProgress += (totalScore*10)*levelResistance;
 
 					if(currentSkill > 100)
 						currentSkill = 100;
 
-					if(progress > 100)
+					if(userProgress > 100)
 					{
-						progress = 0;
+						userProgress = 0;
 						userLevel += 1;
 						if(levelResistance > 0.06)
 							levelResistance -= 0.02;
@@ -337,14 +339,14 @@ $( document ).ready(function() {
 					
 				else if(challengeDifficulty === 'hard'){
 					currentSkill += totalScore*10;
-					progress += (totalScore*50)*levelResistance;
+					userProgress += (totalScore*50)*levelResistance;
 
 					if(currentSkill > 100)
 						currentSkill = 100;
 
-					if(progress > 100)
+					if(userProgress > 100)
 					{
-						progress = 0;
+						userProgress = 0;
 						userLevel += 1;
 						if(levelResistance > 0.06)
 							levelResistance -= 0.02;
@@ -360,6 +362,37 @@ $( document ).ready(function() {
 				currentUser.set('trueRank',trueRank.toString());
 				currentUser.save();
 			}
+
+			var parseUser = Parse.Object.extend("User");
+			var query = new Parse.Query(parseUser);
+			query.ascending("trueRank");
+			query.first({
+			  success: function(results) {
+			    // Successfully retrieved the object.
+
+			    for(var i = 0; i < results.length; i++)
+			    {
+			    	if(results[i].get('username') === currentUser.get('username'))
+			    		increment = false;
+
+			    	if(increment)
+			    	userRank++;
+			    }
+
+			  },
+			  error: function(error) {
+			    alert("Error: " + error.code + " " + error.message);
+			  }
+			});
+
+			//Setting the user rank field
+			$("#rankField").text("Rank: "+userRank);
+			//Setting the level for the user
+			if(userProgress === 0)
+			$("#levelField").text("Level: "+userLevel+"(+)");
+			else
+				$("#levelField").text("Level: "+userLevel);
+
 
 
 			$('#skillCircle').circleProgress({
@@ -391,13 +424,7 @@ $( document ).ready(function() {
 	});
 	
 
-
-	//Setting the user rank field
-	var rank = "Rank: "+currentUser.get("rank");
-	$("#rankField").text(rank);
-	//Setting the level for the user
-	var level = "Level: "+currentUser.get("level");
-	$("#levelField").text(level);
+	
 	//Getting the progress for a given user
 	 var progress = currentUser.get("progress");
 	//Setting the progressbar with data from parse

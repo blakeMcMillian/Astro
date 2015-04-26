@@ -10,7 +10,7 @@ $( document ).ready(function() {
    
 	//Setting up the parse user field
 	var currentUser = Parse.User.current();
-
+	var userRank = 1;
 	//Refreshing the User Instance
 	currentUser.fetch({
 	  success: function(currentUser) {
@@ -21,12 +21,34 @@ $( document ).ready(function() {
 	    // error is a Parse.Error with an error code and message.
 	  }
 	});
+
+	var parseUser = Parse.Object.extend("User");
+			var query = new Parse.Query(parseUser);
+			query.ascending("trueRank");
+			query.first({
+			  success: function(results) {
+			    // Successfully retrieved the object.
+
+			    for(var i = 0; i < results.length; i++)
+			    {
+			    	if(results[i].get('username') === currentUser.get('username'))
+			    		increment = false;
+
+			    	if(increment)
+			    	userRank++;
+			    }
+
+			  },
+			  error: function(error) {
+			    alert("Error: " + error.code + " " + error.message);
+			  }
+			});
 	
 	//Setting the username field
 	$("#usernameField").text(currentUser.get("username"));
 	
 	//Setting the user rank field
-	var rank = "Rank: "+currentUser.get("rank");
+	var rank = "Rank: "+userRank.toString();
 	$("#rankField").text(rank);
 
 	//Setting the level for the user

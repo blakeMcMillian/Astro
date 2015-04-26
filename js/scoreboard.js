@@ -12,7 +12,7 @@ $( document ).ready(function() {
 	//Querying the users in the Parse database
 	var query = new Parse.Query(Parse.User);
 	query.limit(10);
-	query.ascending("rank");
+	query.descending("trueRank");
 	query.find({
 	  success: function(results) 
 	  {
