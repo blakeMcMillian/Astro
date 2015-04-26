@@ -24,9 +24,9 @@ $( document ).ready(function() {
 });
 	
 	//Detecting page click on challenges
-	$("#memorybutton").click(function(){
+	$("#timetrialbutton").click(function(){
        	//Do stuff when clicked
-		user.set('currentChallenge','Memory');
+		user.set('currentChallenge','Time Trial');
 		user.save(null, {
 		  success: function(user) {
 		    // Execute any logic that should take place after the object is saved.

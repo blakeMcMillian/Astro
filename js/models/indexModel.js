@@ -140,10 +140,15 @@ var togglingUsernameAndRegisterationButtonText = function(){
 			$("#registrationButtonPress").text('Cancel');
 			$("#loginButtonPress").text('Register');
 			
-}	
+};	
 var removeFormFields = function(){
 			$('#passwordConfirmation').remove();
 			$('#emailConfirmationOne').remove();
 			$('#emailConfirmationTwo').remove();
 	
 	};
+
+
+
+
+

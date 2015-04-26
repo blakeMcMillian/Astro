@@ -45,21 +45,35 @@ $( document ).ready(function() {
 
 	$('ul').on('click', '.challengesButton', function() 
 	{
-  		var idFromClickedElement = jQuery(this).attr("id");
-  		currentUser.set('currentChallengeActive',idFromClickedElement);
-  		currentUser.save(null, {
-		  success: function(currentUser) {
-		    // Execute any logic that should take place after the object is saved.
+		 var idFromClickedElement = jQuery(this).attr("id");
+		 var challenge = Parse.Object.extend("Challenges");
+		 var query = new Parse.Query(challenge);
+		 query.equalTo("objectId", idFromClickedElement);
+		 query.find({
+	 	 success: function(results) {
+			 	 	currentUser.set('currentChallengeDifficulty',results[0].get('difficulty'));
+		  			currentUser.set('currentChallengeType',results[0].get('challengeType'));
 
-		    //Navigating to a new page
-		   	location.href = "challengequestions.html";
-		  },
-		  error: function(currentUser, error) {
-		    // Execute any logic that should take place if the save fails.
-		    // error is a Parse.Error with an error code and message.
-		    alert('Failed to create new object, with error code: ' + error.message);
-		  }
-		});
+		  			currentUser.set('currentChallengeActive',idFromClickedElement);
+		  			currentUser.save(null, {
+				  success: function(currentUser) {
+				    // Execute any logic that should take place after the object is saved.
+
+				    //Navigating to a new page
+				   	location.href = "challengequestions.html";
+				  },
+				  error: function(currentUser, error) {
+				    // Execute any logic that should take place if the save fails.
+				    // error is a Parse.Error with an error code and message.
+				    alert('Failed to create new object, with error code: ' + error.message);
+				  }
+				});
+
+	      } 
+			      
+	    });
+
+  		
 
 
 	});

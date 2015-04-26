@@ -22,7 +22,8 @@ $( document ).ready(function() {
 
 	//Getting all of the skill levels from parse
 	var timetrial = currentUser.get('timetrialSkill')+'%';
-	var memory = currentUser.get('memorySkill')+'%';
+	//var memory = currentUser.get('memorySkill')+'%';
+	var criticalthinking = currentUser.get('criticalthinkingSkill')+'%';
 	var recognition = currentUser.get('recognitionSkill')+'%';
 	var definition = currentUser.get('definitionsSkill')+'%';
 	var aboveandbeyond = currentUser.get('aboveandbeyondSkill')+'%';
@@ -34,10 +35,10 @@ $( document ).ready(function() {
 	$('#timetrialpercentage').css('width',timetrial);
 
 	//Memory
-	if(!memory)
-	$('#memorypercentage').css('width','0');
+	if(!criticalthinking)
+	$('#criticalthinkingpercentage').css('width','0');
 		else
-	$('#memorypercentage').css('width',memory);
+	$('#criticalthinkingpercentage').css('width',criticalthinking);
 
 	//Recognition
 	if(!recognition)

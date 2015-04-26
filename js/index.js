@@ -9,7 +9,19 @@ Blake McMillian
 //Document ready function
 $( document ).ready(function() {
 	
-	
+
+	var userObjects = Parse.Object.extend("User");
+	var query = new Parse.Query(userObjects);
+	var rank = '';
+	 
+	 query.find({
+ 	 success: function(results) {
+    // comments now contains the comments for myPost
+   		var num = results.length;
+   		rank = num.toString();
+   		
+  } });
+
 	 
 	//Listening for LOGIN button to be pressed
 	$("#loginButtonPress").click(function(){
@@ -56,7 +68,17 @@ $( document ).ready(function() {
 					user.set("username", usernameRegistration);
 					user.set("password", passwordConfirmation);
 					user.set("email", emailRegistration);
-					
+					user.set('timetrialSkill',10);
+					user.set('memorySkill',10);
+					user.set('recognitionSkill',10);
+					user.set('definitionsSkill',10);
+					user.set('aboveandbeyondSkill',10);
+					user.set('level','1');
+					user.set('progress','10');
+					user.set('levelResistance',1);
+					user.set('rank',rank);
+					user.set('trueRank',1);
+
 					//Signing up the new user
 					userSigninFunction(user);
 					
@@ -81,6 +103,7 @@ $( document ).ready(function() {
 	//Listening for LOGIN button to be pressed
 	$("#registrationButtonPress").click(function(){
 
+		
 		if(toggleHeight)
 		{
 			//Hiding password, and email fields
