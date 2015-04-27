@@ -81,6 +81,11 @@ $( document ).ready(function() {
 		    currentUser.set('password',password);
 		    currentUser.save();
 		});
+		$(".button_4").click(function(e){
+			
+			Parse.User.logOut();
+			location.href = "index.html";
+		});
 		
 		
 
