@@ -53,9 +53,7 @@ $( document ).ready(function() {
 	});
 	$(".buttonPrevious").click(function(e){
 
-			pagePosition--
-			pagePosition = pagePosition%profileImageArray.length;
-			pagePosition = Math.abs(pagePosition);
+			pagePosition = (pagePosition+profileImageArray.length-1) % profileImageArray.length;
 			$("#profileImage").attr("src",profileImageArray[pagePosition].get('largeImage').url());
 			currentUser.set('profilePicture',profileImageArray[pagePosition].get('largeImage'));
 			currentUser.set('thumbnail',profileImageArray[pagePosition].get('smallImage'));
