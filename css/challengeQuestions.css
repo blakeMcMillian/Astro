@@ -86,6 +86,8 @@ li button {
 .questionText {
     margin-top:25px;
     white-space:normal;
+    font-family:Al Bayan;
+    font-size:large;
 }
 
 .questionContainer {
@@ -111,7 +113,7 @@ li button {
 
 div h2 {
     font-family:Helvetica Neue;
-    font-size:x-large;
+    font-size:-webkit-xxx-large;
     font-weight:100;
     padding-left:67px;
 }
@@ -128,7 +130,7 @@ li a {
 
 li p {
     padding-top:-3px;
-    font-size:small;
+    font-size:medium;
     display:inline-block;
     white-space:normal;
     height:40px;
@@ -140,6 +142,7 @@ li p {
     padding-top:32px;
     height:inherit;
     text-align:left;
+    font-size:medium;
 }
 
 .answerText {

@@ -71,6 +71,7 @@ $( document ).ready(function() {
 					  success: function(object) {
 					    // Successfully retrieved the object.
 					    var profileImage = object.get('largeImage');
+					    var thumbnail = object.get('smallImage');
 
 						    //Creating a new user object
 						var user = new Parse.User();
@@ -89,6 +90,7 @@ $( document ).ready(function() {
 						user.set('rank',rank);
 						user.set('trueRank',1);
 						user.set('profilePicture',profileImage);
+						user.set('thumbnail',thumbnail);
 
 						//Signing up the new user
 						userSigninFunction(user);

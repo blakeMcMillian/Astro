@@ -48,6 +48,7 @@ $( document ).ready(function() {
 	    	pagePosition = pagePosition%profileImageArray.length;
 	    	$("#profileImage").attr("src",profileImageArray[pagePosition].get('largeImage').url());
 	    	currentUser.set('profilePicture',profileImageArray[pagePosition].get('largeImage'));
+	    	currentUser.set('thumbnail',profileImageArray[pagePosition].get('smallImage'));
 	    	currentUser.save();
 	});
 	$(".buttonPrevious").click(function(e){
@@ -57,6 +58,8 @@ $( document ).ready(function() {
 			pagePosition = Math.abs(pagePosition);
 			$("#profileImage").attr("src",profileImageArray[pagePosition].get('largeImage').url());
 			currentUser.set('profilePicture',profileImageArray[pagePosition].get('largeImage'));
+			currentUser.set('thumbnail',profileImageArray[pagePosition].get('smallImage'));
+
 			currentUser.save();
 
 	});

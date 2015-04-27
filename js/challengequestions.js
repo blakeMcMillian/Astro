@@ -27,7 +27,7 @@ $( document ).ready(function() {
         numericalPosition = pagePosition;
      // Load the inital questionsPrompt
      if(i === 0){
-     		 $('#questionInstructions').text(pagePosition);
+     		 $('#questionInstructions').text(results[i].get('questionPrompt'));
 		      //Append the html
 		      if(results[i].get('htmlFormat'))
 		      $('.questionContainer').append(results[i].get('htmlFormat'));
@@ -101,7 +101,7 @@ $( document ).ready(function() {
 				jQuery('#choice4').css('opacity', '1.0');
 	    	}
 
-	    	$('#questionInstructions').text(pagePosition);
+	    	$('#questionInstructions').text(questionArray[pagePosition-1].get('questionPrompt'));
 		      //Append the html
 		      if(questionArray[pagePosition-1].get('htmlFormat'))
 		      $('.questionContainer').append(questionArray[pagePosition-1].get('htmlFormat'));
@@ -167,7 +167,7 @@ $( document ).ready(function() {
 	    	}
 	    	
 
-	    	$('#questionInstructions').text(pagePosition);
+	    	$('#questionInstructions').text(questionArray[pagePosition-1].get('questionPrompt'));
 		      //Append the html
 		      if(questionArray[pagePosition-1].get('htmlFormat'))
 		      $('.questionContainer').append(questionArray[pagePosition-1].get('htmlFormat'));
