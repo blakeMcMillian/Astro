@@ -104,7 +104,7 @@ $( document ).ready(function() {
 				currentUser.set('progress',userProgress.toString());
 				currentUser.set('level', userLevel.toString());	
 				currentUser.set('criticalthinkingSkill',currentSkill);
-				trueRank = userLevel*((currentUser.get('criticalthinkingSkill')+currentUser.get('timetrialSkill')+currentUser.get('recognitionSkill')+currentUser.get('definitionsSkill')+currentUser.get('aboveandbeyondSkill'))/500);
+				trueRank = (userLevel+9)*((currentUser.get('criticalthinkingSkill')+currentUser.get('timetrialSkill')+currentUser.get('recognitionSkill')+currentUser.get('definitionsSkill')+currentUser.get('aboveandbeyondSkill'))/500);
 				currentUser.set('trueRank',trueRank);
 				currentUser.save();
 			}
@@ -168,7 +168,7 @@ $( document ).ready(function() {
 				currentUser.set('progress',userProgress.toString());
 				currentUser.set('level', userLevel.toString());	
 				currentUser.set('criticalthinkingSkill',currentSkill);
-				trueRank = userLevel*((currentUser.get('criticalthinkingSkill')+currentUser.get('timetrialSkill')+currentUser.get('recognitionSkill')+currentUser.get('definitionsSkill')+currentUser.get('aboveandbeyondSkill'))/500);
+				trueRank = (userLevel+9)*((currentUser.get('criticalthinkingSkill')+currentUser.get('timetrialSkill')+currentUser.get('recognitionSkill')+currentUser.get('definitionsSkill')+currentUser.get('aboveandbeyondSkill'))/500);
 				currentUser.set('trueRank',trueRank);
 				currentUser.save();
 			}
@@ -232,7 +232,7 @@ $( document ).ready(function() {
 				currentUser.set('progress',userProgress.toString());
 				currentUser.set('level', userLevel.toString());	
 				currentUser.set('criticalthinkingSkill',currentSkill);
-				trueRank = userLevel*((currentUser.get('criticalthinkingSkill')+currentUser.get('timetrialSkill')+currentUser.get('recognitionSkill')+currentUser.get('definitionsSkill')+currentUser.get('aboveandbeyondSkill'))/500);
+				trueRank = (userLevel+9)*((currentUser.get('criticalthinkingSkill')+currentUser.get('timetrialSkill')+currentUser.get('recognitionSkill')+currentUser.get('definitionsSkill')+currentUser.get('aboveandbeyondSkill'))/500);
 				currentUser.set('trueRank',trueRank);
 				currentUser.save();
 			}
@@ -296,7 +296,7 @@ $( document ).ready(function() {
 				currentUser.set('progress',userProgress.toString());
 				currentUser.set('level', userLevel.toString());	
 				currentUser.set('criticalthinkingSkill',currentSkill);
-				trueRank = userLevel*((currentUser.get('criticalthinkingSkill')+currentUser.get('timetrialSkill')+currentUser.get('recognitionSkill')+currentUser.get('definitionsSkill')+currentUser.get('aboveandbeyondSkill'))/500);
+				trueRank = (userLevel+9)*((currentUser.get('criticalthinkingSkill')+currentUser.get('timetrialSkill')+currentUser.get('recognitionSkill')+currentUser.get('definitionsSkill')+currentUser.get('aboveandbeyondSkill'))/500);
 				currentUser.set('trueRank',trueRank);
 				currentUser.save();
 			}
@@ -360,7 +360,7 @@ $( document ).ready(function() {
 				currentUser.set('progress',userProgress.toString());
 				currentUser.set('level', userLevel.toString());	
 				currentUser.set('criticalthinkingSkill',currentSkill);
-				trueRank = userLevel*((currentUser.get('criticalthinkingSkill')+currentUser.get('timetrialSkill')+currentUser.get('recognitionSkill')+currentUser.get('definitionsSkill')+currentUser.get('aboveandbeyondSkill'))/500);
+				trueRank = (userLevel+9)*((currentUser.get('criticalthinkingSkill')+currentUser.get('timetrialSkill')+currentUser.get('recognitionSkill')+currentUser.get('definitionsSkill')+currentUser.get('aboveandbeyondSkill'))/500);
 				currentUser.set('trueRank',trueRank);
 				currentUser.save();
 			}

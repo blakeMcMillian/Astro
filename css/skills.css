@@ -1,6 +1,6 @@
 @charset "utf-8";
 .skillsHeader {
-    margin-top:125px;
+    margin-top:38px;
     z-index:0;
     display:run-in;
     position:absolute;
@@ -45,7 +45,7 @@ li p {
 }
 
 .mainSectionContainer ul {
-    margin-top:237px;
+    margin-top:150px;
 }
 
 .starList {

@@ -57,10 +57,15 @@ $( document ).ready(function() {
 				//Confirm that both passwords are the same
 				if(passwordRegistration === passwordConfirmation)
 				passwordIsValid = true;
+				else
+					alert('Please make sure that both of your passwords are identical');
 			
 				//Confirm that both email addresses are the same
 				if(emailRegistration === emailConfirmationRegistration)
 				emailIsValid = true;
+				else
+					alert('Please make sure that both of your email addresses are identical');
+
 				
 				//Make sure the last 4 characters of the string ends in ".com"
 				if(passwordIsValid && emailIsValid)
@@ -103,6 +108,7 @@ $( document ).ready(function() {
 					
 					
 				}//end - conditional
+				
 								
 			}//end - if conditional
 			
