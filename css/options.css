@@ -1,4 +1,25 @@
 @charset "utf-8";
+.contentList {
+}
+
+#usernameInputField {
+    display:inline-block;
+    width:300px;
+    background-color:transparent;
+}
+
+#passwordInputField {
+    display:inline-block;
+    width:300px;
+    background-color:transparent;
+}
+
+#emailInputField {
+    display:inline-block;
+    width:300px;
+    background-color:transparent;
+}
+
 #profileImage {
     height:400px;
     width:400px;
@@ -17,7 +38,7 @@ a p {
     border-radius:20px;
     width:47px;
     height:41px;
-    background-color:#3498db;
+    background-color:transparent;
     margin:4px;
     display:inline-block;
 }
@@ -30,7 +51,7 @@ button p {
     border-radius:20px;
     width:47px;
     height:41px;
-    background-color:#e74c3c;
+    background-color:transparent;
     margin:4px;
 }
 
@@ -42,16 +63,17 @@ li button {
     border-radius:20px;
     width:47px;
     height:41px;
-    background-color:#2ecc71;
+    background-color:transparent;
     margin:4px;
 }
 
 .button_4 {
     border-radius:20px;
-    width:47px;
+    width:57px;
     height:41px;
-    background-color:#9b59b6;
-    margin:4px;
+    background-color:transparent;
+    margin:4px auto;
+    display:block;
 }
 
 .buttonPrevious {
@@ -97,6 +119,7 @@ li button {
     width:350;
     height:400px;
     background:transparent;
+    box-shadow:0px;
 }
 
 .middleContainer {
@@ -138,6 +161,9 @@ li p {
     height:40px;
     width:550px;
     word-wrap:break-word;
+    color:black;
+    text-align:left;
+    padding-top:8px;
 }
 
 .questionChoiceOne {
