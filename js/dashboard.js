@@ -80,7 +80,6 @@ $( document ).ready(function() {
 			    	
 			    	if(results[i].get('username') === currentUser.get('username')){
 			    		increment = false;
-			    		alert('is user');
 			    		//Setting the username field
 						$("#usernameField").text(currentUser.get("username"));
 						
@@ -95,7 +94,6 @@ $( document ).ready(function() {
 
 			    	if(increment)
 			    	{
-			    		alert('not user');
 			    		userRank++;
 			    	}
 			    	

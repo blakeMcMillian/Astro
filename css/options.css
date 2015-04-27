@@ -1,0 +1,159 @@
+@charset "utf-8";
+#profileImage {
+    height:400px;
+    width:400px;
+}
+
+.submissionAnchor {
+    margin-left:3px;
+}
+
+a p {
+    text-align:center;
+    padding:75px 4px 4px 4px;
+}
+
+.button_1 {
+    border-radius:20px;
+    width:47px;
+    height:41px;
+    background-color:#3498db;
+    margin:4px;
+    display:inline-block;
+}
+
+button p {
+    color:black;
+}
+
+.button_2 {
+    border-radius:20px;
+    width:47px;
+    height:41px;
+    background-color:#e74c3c;
+    margin:4px;
+}
+
+li button {
+    padding-bottom:12px;
+}
+
+.button_3 {
+    border-radius:20px;
+    width:47px;
+    height:41px;
+    background-color:#2ecc71;
+    margin:4px;
+}
+
+.button_4 {
+    border-radius:20px;
+    width:47px;
+    height:41px;
+    background-color:#9b59b6;
+    margin:4px;
+}
+
+.buttonPrevious {
+    border-radius:20px;
+    width:47px;
+    height:41px;
+    background-color:#ecf0f1;
+    margin:95px 4px 4px 4px;
+}
+
+.buttonNext {
+    border-radius:20px;
+    width:47px;
+    height:41px;
+    background-color:#ecf0f1;
+    margin:95px 4px 4px 4px;
+}
+
+.buttonSubmit {
+    border-radius:42px;
+    width:96px;
+    height:120px;
+    background-color:#ecf0f1;
+    margin:0px 4px 4px 4px;
+}
+
+.submissionDiv {
+    margin-top:30px;
+}
+
+.answerchoiceContainer {
+    margin-top:20px;
+    height:500px;
+    display:block;
+}
+
+.questionText {
+    margin-top:25px;
+    white-space:normal;
+}
+
+.profileImageContainer {
+    width:350;
+    height:400px;
+    background:transparent;
+}
+
+.middleContainer {
+    height:250px;
+    display:block;
+}
+
+.buttonNext {
+    margin-top:95px;
+}
+
+.pageLabelAndImageContainer {
+    margin-top:110px;
+    height:400px;
+}
+
+div h2 {
+    font-family:Helvetica Neue;
+    font-size:x-large;
+    font-weight:100;
+    padding-left:67px;
+}
+
+li {
+    margin-bottom:25px;
+    border:solid 1px transparent;
+    color:black;
+}
+
+li a {
+    margin-right:19px;
+}
+
+li p {
+    padding-top:-3px;
+    font-size:small;
+    display:inline-block;
+    white-space:normal;
+    height:40px;
+    width:550px;
+    word-wrap:break-word;
+}
+
+.questionChoiceOne {
+    padding-top:32px;
+    height:inherit;
+    text-align:left;
+}
+
+.answerText {
+}
+
+.mainSectionContainer ul {
+    margin-top:0px;
+}
+
+body {
+    color:#555;
+}
+

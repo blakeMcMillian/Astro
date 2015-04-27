@@ -44,7 +44,9 @@ $( document ).ready(function() {
 			
 			//Make sure that the username does not exist
 			var queryUsers = new Parse.Query(Parse.User);
+			var GameScore = Parse.Object.extend("GameScore");
 			
+
 			//Querying whether or not the user exists
 			queryUsers.equalTo("username", usernameRegistration); 
 			//Determining if the user is valid
@@ -63,25 +65,40 @@ $( document ).ready(function() {
 				//Make sure the last 4 characters of the string ends in ".com"
 				if(passwordIsValid && emailIsValid)
 				{
-					//Creating a new user object
-					var user = new Parse.User();
-					user.set("username", usernameRegistration);
-					user.set("password", passwordConfirmation);
-					user.set("email", emailRegistration);
-					user.set('timetrialSkill',10);
-					user.set('memorySkill',10);
-					user.set('recognitionSkill',10);
-					user.set('definitionsSkill',10);
-					user.set('aboveandbeyondSkill',10);
-					user.set('criticalthinkingSkill',10);
-					user.set('level','1');
-					user.set('progress','10');
-					user.set('levelResistance',1);
-					user.set('rank',rank);
-					user.set('trueRank',"1");
+					var profilePicture = Parse.Object.extend("ProfilePictures");
+					var query = new Parse.Query(profilePicture);
+					query.first({
+					  success: function(object) {
+					    // Successfully retrieved the object.
+					    var profileImage = object.get('largeImage');
 
-					//Signing up the new user
-					userSigninFunction(user);
+						    //Creating a new user object
+						var user = new Parse.User();
+						user.set("username", usernameRegistration);
+						user.set("password", passwordConfirmation);
+						user.set("email", emailRegistration);
+						user.set('timetrialSkill',10);
+						user.set('memorySkill',10);
+						user.set('recognitionSkill',10);
+						user.set('definitionsSkill',10);
+						user.set('aboveandbeyondSkill',10);
+						user.set('criticalthinkingSkill',10);
+						user.set('level','1');
+						user.set('progress','10');
+						user.set('levelResistance',1);
+						user.set('rank',rank);
+						user.set('trueRank',1);
+						user.set('profilePicture',profileImage);
+
+						//Signing up the new user
+						userSigninFunction(user);
+
+					  },
+					  error: function(error) {
+					    alert("Error: " + error.code + " " + error.message);
+					  }
+					});
+					
 					
 				}//end - conditional
 								

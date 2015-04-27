@@ -51,7 +51,7 @@ $( document ).ready(function() {
 
 				if(challengeDifficulty === 'easy')
 				{
-					currentSkill += totalScore*2.5;
+					currentSkill += totalScore*1;
 					userProgress += (totalScore*5)*levelResistance;
 
 					if(currentSkill > 100)
@@ -68,7 +68,7 @@ $( document ).ready(function() {
 				}
 					
 				else if(challengeDifficulty === 'medium'){
-					currentSkill += totalScore*5;
+					currentSkill += totalScore*2.5;
 					userProgress += (totalScore*10)*levelResistance;
 
 					if(currentSkill > 100)
@@ -84,7 +84,7 @@ $( document ).ready(function() {
 				}
 					
 				else if(challengeDifficulty === 'hard'){
-					currentSkill += totalScore*10;
+					currentSkill += totalScore*5;
 					userProgress += (totalScore*50)*levelResistance;
 
 					if(currentSkill > 100)
@@ -105,7 +105,7 @@ $( document ).ready(function() {
 				currentUser.set('level', userLevel.toString());	
 				currentUser.set('criticalthinkingSkill',currentSkill);
 				trueRank = userLevel*((currentUser.get('criticalthinkingSkill')+currentUser.get('timetrialSkill')+currentUser.get('recognitionSkill')+currentUser.get('definitionsSkill')+currentUser.get('aboveandbeyondSkill'))/500);
-				currentUser.set('trueRank',trueRank.toString());
+				currentUser.set('trueRank',trueRank);
 				currentUser.save();
 			}
 			else if(currentChallenge === 'Time Trials')
@@ -115,7 +115,7 @@ $( document ).ready(function() {
 
 				if(challengeDifficulty === 'easy')
 				{
-					currentSkill += totalScore*2.5;
+					currentSkill += totalScore*1;
 					userProgress += (totalScore*5)*levelResistance;
 
 					if(currentSkill > 100)
@@ -132,7 +132,7 @@ $( document ).ready(function() {
 				}
 					
 				else if(challengeDifficulty === 'medium'){
-					currentSkill += totalScore*5;
+					currentSkill += totalScore*2.5;
 					userProgress += (totalScore*10)*levelResistance;
 
 					if(currentSkill > 100)
@@ -148,7 +148,7 @@ $( document ).ready(function() {
 				}
 					
 				else if(challengeDifficulty === 'hard'){
-					currentSkill += totalScore*10;
+					currentSkill += totalScore*5;
 					userProgress += (totalScore*50)*levelResistance;
 
 					if(currentSkill > 100)
@@ -169,7 +169,7 @@ $( document ).ready(function() {
 				currentUser.set('level', userLevel.toString());	
 				currentUser.set('criticalthinkingSkill',currentSkill);
 				trueRank = userLevel*((currentUser.get('criticalthinkingSkill')+currentUser.get('timetrialSkill')+currentUser.get('recognitionSkill')+currentUser.get('definitionsSkill')+currentUser.get('aboveandbeyondSkill'))/500);
-				currentUser.set('trueRank',trueRank.toString());
+				currentUser.set('trueRank',trueRank);
 				currentUser.save();
 			}
 			else if(currentChallenge === 'Recognition')
@@ -179,7 +179,7 @@ $( document ).ready(function() {
 
 				if(challengeDifficulty === 'easy')
 				{
-					currentSkill += totalScore*2.5;
+					currentSkill += totalScore*1;
 					userProgress += (totalScore*5)*levelResistance;
 
 					if(currentSkill > 100)
@@ -196,7 +196,7 @@ $( document ).ready(function() {
 				}
 					
 				else if(challengeDifficulty === 'medium'){
-					currentSkill += totalScore*5;
+					currentSkill += totalScore*2.5;
 					userProgress += (totalScore*10)*levelResistance;
 
 					if(currentSkill > 100)
@@ -212,7 +212,7 @@ $( document ).ready(function() {
 				}
 					
 				else if(challengeDifficulty === 'hard'){
-					currentSkill += totalScore*10;
+					currentSkill += totalScore*5;
 					userProgress += (totalScore*50)*levelResistance;
 
 					if(currentSkill > 100)
@@ -233,7 +233,7 @@ $( document ).ready(function() {
 				currentUser.set('level', userLevel.toString());	
 				currentUser.set('criticalthinkingSkill',currentSkill);
 				trueRank = userLevel*((currentUser.get('criticalthinkingSkill')+currentUser.get('timetrialSkill')+currentUser.get('recognitionSkill')+currentUser.get('definitionsSkill')+currentUser.get('aboveandbeyondSkill'))/500);
-				currentUser.set('trueRank',trueRank.toString());
+				currentUser.set('trueRank',trueRank);
 				currentUser.save();
 			}
 			else if(currentChallenge === 'Definitions')
@@ -243,7 +243,7 @@ $( document ).ready(function() {
 
 				if(challengeDifficulty === 'easy')
 				{
-					currentSkill += totalScore*2.5;
+					currentSkill += totalScore*1;
 					userProgress += (totalScore*5)*levelResistance;
 
 					if(currentSkill > 100)
@@ -260,7 +260,7 @@ $( document ).ready(function() {
 				}
 					
 				else if(challengeDifficulty === 'medium'){
-					currentSkill += totalScore*5;
+					currentSkill += totalScore*2.5;
 					userProgress += (totalScore*10)*levelResistance;
 
 					if(currentSkill > 100)
@@ -276,7 +276,7 @@ $( document ).ready(function() {
 				}
 					
 				else if(challengeDifficulty === 'hard'){
-					currentSkill += totalScore*10;
+					currentSkill += totalScore*5;
 					userProgress += (totalScore*50)*levelResistance;
 
 					if(currentSkill > 100)
@@ -297,7 +297,7 @@ $( document ).ready(function() {
 				currentUser.set('level', userLevel.toString());	
 				currentUser.set('criticalthinkingSkill',currentSkill);
 				trueRank = userLevel*((currentUser.get('criticalthinkingSkill')+currentUser.get('timetrialSkill')+currentUser.get('recognitionSkill')+currentUser.get('definitionsSkill')+currentUser.get('aboveandbeyondSkill'))/500);
-				currentUser.set('trueRank',trueRank.toString());
+				currentUser.set('trueRank',trueRank);
 				currentUser.save();
 			}
 			else if(currentChallenge === 'Above and Beyond')
@@ -307,7 +307,7 @@ $( document ).ready(function() {
 
 				if(challengeDifficulty === 'easy')
 				{
-					currentSkill += totalScore*2.5;
+					currentSkill += totalScore*1;
 					userProgress += (totalScore*5)*levelResistance;
 
 					if(currentSkill > 100)
@@ -324,7 +324,7 @@ $( document ).ready(function() {
 				}
 					
 				else if(challengeDifficulty === 'medium'){
-					currentSkill += totalScore*5;
+					currentSkill += totalScore*2.5;
 					userProgress += (totalScore*10)*levelResistance;
 
 					if(currentSkill > 100)
@@ -340,7 +340,7 @@ $( document ).ready(function() {
 				}
 					
 				else if(challengeDifficulty === 'hard'){
-					currentSkill += totalScore*10;
+					currentSkill += totalScore*5;
 					userProgress += (totalScore*50)*levelResistance;
 
 					if(currentSkill > 100)
@@ -361,22 +361,25 @@ $( document ).ready(function() {
 				currentUser.set('level', userLevel.toString());	
 				currentUser.set('criticalthinkingSkill',currentSkill);
 				trueRank = userLevel*((currentUser.get('criticalthinkingSkill')+currentUser.get('timetrialSkill')+currentUser.get('recognitionSkill')+currentUser.get('definitionsSkill')+currentUser.get('aboveandbeyondSkill'))/500);
-				currentUser.set('trueRank',trueRank.toString());
+				currentUser.set('trueRank',trueRank);
 				currentUser.save();
 			}
 
 			var parseUser = Parse.Object.extend("User");
 			var query = new Parse.Query(parseUser);
-			query.ascending("trueRank");
-			query.first({
+			query.descending("trueRank");
+			query.find({
 			  success: function(results) {
 			    // Successfully retrieved the object.
-
 			    for(var i = 0; i < results.length; i++)
 			    {
-			    	if(results[i].get('username') === currentUser.get('username'))
+			    	if(results[i].get('username') === currentUser.get('username')){
+			    		//Setting the user rank field
 			    		increment = false;
+						$("#rankField").text("Rank: "+userRank);
 
+			    	}
+			    		
 			    	if(increment)
 			    	userRank++;
 			    }
@@ -387,8 +390,7 @@ $( document ).ready(function() {
 			  }
 			});
 
-			//Setting the user rank field
-			$("#rankField").text("Rank: "+userRank);
+			
 			//Setting the level for the user
 			if(userProgress === 0)
 			$("#levelField").text("Level: "+userLevel+"(+)");
